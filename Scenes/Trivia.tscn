@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Trivia.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/QuizDynamic.gd" type="Script" id=2]
+[ext_resource path="res://Assets/assets-trivia/trivia.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Assets/alagard.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/alagard.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_color = Color( 0.984314, 0.54902, 0.0196078, 1 )
+font_data = SubResource( 1 )
+
+[node name="Trivia" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -1.0
+margin_right = 4.0
+margin_bottom = -1.0
+script = ExtResource( 1 )
+
+[node name="QuizDynamic" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Question" type="Label" parent="VBox"]
+margin_top = 219.0
+margin_right = 1024.0
+margin_bottom = 234.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "La Pregunta va aca"
+align = 1
+
+[node name="Grid" type="GridContainer" parent="VBox"]
+margin_top = 458.0
+margin_right = 1024.0
+margin_bottom = 600.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt1" type="Button" parent="VBox/Grid"]
+margin_right = 223.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 0, 50 )
+rect_pivot_offset = Vector2( 199, 35 )
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Option1"
+icon = ExtResource( 4 )
+icon_align = 1
+
+[node name="Opt2" type="Button" parent="VBox/Grid"]
+margin_left = 227.0
+margin_right = 450.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Option2"
+icon = ExtResource( 4 )
+icon_align = 1
+
+[node name="Opt3" type="Button" parent="VBox/Grid"]
+margin_top = 73.0
+margin_right = 223.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Option3"
+icon = ExtResource( 4 )
+icon_align = 1
+
+[node name="Opt4" type="Button" parent="VBox/Grid"]
+margin_left = 227.0
+margin_top = 73.0
+margin_right = 450.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Option4"
+icon = ExtResource( 4 )
+icon_align = 1
+
+[connection signal="pressed" from="VBox/Grid/Opt1" to="." method="_on_Opt1_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt2" to="." method="_on_Opt1_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt3" to="." method="_on_Opt1_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt4" to="." method="_on_Opt1_pressed"]

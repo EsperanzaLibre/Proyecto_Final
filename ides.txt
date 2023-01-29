@@ -1,0 +1,50 @@
+menu inicio
+	Opciones
+		sonido
+		musica
+	Nombre de player
+	selector de nivel con condicionantes
+	creditos
+	play, pasa a contar historia previa de nivel, solo nivel 1 tiene diferente
+	
+nivel 1 - pueblo con bosque
+	paralax solamente para cielo y montañas
+	enemigos 
+		animales
+		ladron
+	power ups - mago con las preguntas
+	enemigo del level
+		tira una llave cuando muere
+	para pasar de nivel, colision mas llave = true
+	transcicion del nivel, pantalla de carga con historia de lo que paso
+	usar texto flotante
+
+nivel 2 - cueva
+	luz de mati
+	idem a lo otro
+	power ups - mago con las preguntas
+	enemigos 
+		murcielago
+		oso
+		lobo
+		algun hombre de caverna
+		
+nivel 3 - cueva lava 
+	luz de mati
+	golem de lava
+	magos
+	piedras
+	idem a lo otro
+	power ups - mago con las preguntas
+	
+nivel 4 - dungeon del castillo
+	luz de mati mucho mas chica
+	paredes con antorchas
+	idem a lo otro
+	trampas
+	power ups - mago con las preguntas
+
+nivel 5 - castillo
+	paralax de cielo montañas
+	jefe final + enemigos finales de cada level
+

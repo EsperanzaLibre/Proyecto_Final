@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Suriken.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/AreaEnemySuriken.gd" type="Script" id=2]
+[ext_resource path="res://Assets/lifebar_green.png" type="Texture" id=3]
+[ext_resource path="res://Assets/lifebar_red.png" type="Texture" id=4]
+[ext_resource path="res://Assets/lifebar_black.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Angel wish.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.1421
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 14
+font_data = ExtResource( 6 )
+
+[node name="EnemySuriken" type="Node2D" groups=["Enemy"]]
+
+[node name="AreaEnemySuriken" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="AreaEnemySuriken"]
+texture = ExtResource( 1 )
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEnemySuriken"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AreaEnemySuriken"]
+autoplay = "idle"
+playback_speed = 1.5
+anims/RESET = SubResource( 2 )
+anims/idle = SubResource( 3 )
+
+[node name="LifeBar" type="TextureProgress" parent="."]
+margin_left = -15.0
+margin_top = -29.0
+margin_right = 17.0
+margin_bottom = -25.0
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 3 )
+
+[node name="EnemyName" type="Label" parent="."]
+margin_left = -41.0
+margin_top = -56.0
+margin_right = 42.0
+margin_bottom = -29.0
+custom_colors/font_color = Color( 0.0784314, 0.168627, 0.0784314, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Test"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="FlashTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="AreaEnemySuriken" to="AreaEnemySuriken" method="_on_AreaEnemySuriken_body_entered"]
