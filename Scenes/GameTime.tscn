@@ -33,7 +33,7 @@ margin_top = 4.0
 margin_right = 37.0
 margin_bottom = 44.0
 script = ExtResource( 1 )
-minutes = 1
+minutes = 5
 
 [node name="Minutes" type="RichTextLabel" parent="UI/CountDown"]
 margin_left = -3.0

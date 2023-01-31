@@ -486,7 +486,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 0.353553
+shader_param/zoom = 0.943874
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -540,7 +540,7 @@ scale = Vector2( 3.04713, 2.40495 )
 texture = ExtResource( 18 )
 
 [node name="Hud" type="Node2D" parent="ParallaxBackground"]
-position = Vector2( 30, 27 )
+position = Vector2( 23, 7 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 21 )]

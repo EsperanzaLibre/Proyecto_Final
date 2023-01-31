@@ -1,13 +1,16 @@
 extends Control
 
-export (int) var minutes = 0
-export (int) var seconds = 0
+export (int) var minutes
+export (int) var seconds 
 var dsec = 0
 
 func _physics_process(delta):
 	
 	if Global.timer:
-		_run_Game_time()
+		if !Global.timer_pause:
+			_run_Game_time()
+		else:
+			print("entro a la pausa")
 	else:
 		print("Fin de timer")
 

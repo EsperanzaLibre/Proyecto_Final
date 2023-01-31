@@ -16,6 +16,7 @@ func _physics_process(delta):
 		if Global.scene_to_back == "": #pregunto si la escena a volver esta vacia
 			print("Entra al Hall de la trivia")
 			print(Global.scene_to_back)
+			Global.timer_pause = true
 			Global.player_door_map_position = self.global_position #tomo la posicion global de la puerta en el lvl
 			Global.player_door_map_position.x += 40 #offset para que no salga encima de la puerta
 			Global.player_initial_map_position = player_spawn_location #le paso la posicion al player

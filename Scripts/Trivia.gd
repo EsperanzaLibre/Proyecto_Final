@@ -36,35 +36,28 @@ func _on_get_question(num):
 	$VBox/Grid/Opt3.text = trivia.get_answer(3)
 	$VBox/Grid/Opt4.text = trivia.get_answer(4)
 
+func check_trivia():
+	disable_all()
+	
+	if questions > 0:
+		questions -= 1
+		wait_for_next_question()
+	elif Global.triviaCorrectAnswers == 3:
+		contenedor.text = "Has Ganado un poder especial y vida completa"
+		Global.player_life = Global.player_max_life
+		yield(get_tree().create_timer(3.0), "timeout")
+	else:
+		contenedor.text = "Debes aprender mas del mundo GAMER!!"
+		yield(get_tree().create_timer(3.0), "timeout")
 
 func _on_correct_answer():
 	contenedor.text = "Es Correcto!"
 	Global.triviaCorrectAnswers += 1
-	disable_all()
-	
-	if questions > 0:
-		questions -= 1
-		wait_for_next_question()
-	elif Global.triviaCorrectAnswers == 3:
-		contenedor.text = "Has Ganado un poder especial"
-	else:
-		contenedor.text = "Debes aprender mas del mundo GAMER!!"
-
+	check_trivia()
 
 func _on_incorrect_answer():
-	contenedor.text = "Es Incorrecto!" 
-	disable_all()
-	
-	#if not trivia.is_last_question():
-	if questions > 0:
-		questions -= 1
-		wait_for_next_question()
-	elif Global.triviaCorrectAnswers == 3:
-		contenedor.text = "Has Ganado un poder especial"
-		yield(get_tree().create_timer(3.0), "timeout")
-	else:
-		contenedor.text = "Debes aprender mas del mundo GAMER!!"
-		yield(get_tree().create_timer(3.0), "timeout")
+	contenedor.text = "Es Incorrecto!"
+	check_trivia() 
 
 func _on_Opt1_pressed():
 	trivia.is_correct(1)
