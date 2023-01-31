@@ -2,7 +2,7 @@ extends Control
 
 onready var trivia = $QuizDynamic
 onready var contenedor = $VBox/Question
-var questions = 3
+var questions = 4
 
 func _ready():
 
@@ -14,10 +14,10 @@ func _ready():
 	
 	new_question()
 
-func new_question():
+func new_question():#creo la nueva pregunta
 	contenedor.text = trivia.get_question()
 
-func disable_all(disabled := true):
+func disable_all(disabled := true): #deshabilito los botones de la grilla
 	for button in $VBox/Grid.get_children():
 		button.disabled = disabled
 		
@@ -45,8 +45,10 @@ func _on_correct_answer():
 	if questions > 0:
 		questions -= 1
 		wait_for_next_question()
+	elif Global.triviaCorrectAnswers == 3:
+		contenedor.text = "Has Ganado un poder especial"
 	else:
-		contenedor.text = "Gracias por Jugar!!"
+		contenedor.text = "Debes aprender mas del mundo GAMER!!"
 
 
 func _on_incorrect_answer():
@@ -57,10 +59,12 @@ func _on_incorrect_answer():
 	if questions > 0:
 		questions -= 1
 		wait_for_next_question()
-	else:
-		contenedor.text = "Gracias por Jugar!!"
+	elif Global.triviaCorrectAnswers == 3:
+		contenedor.text = "Has Ganado un poder especial"
 		yield(get_tree().create_timer(3.0), "timeout")
-
+	else:
+		contenedor.text = "Debes aprender mas del mundo GAMER!!"
+		yield(get_tree().create_timer(3.0), "timeout")
 
 func _on_Opt1_pressed():
 	trivia.is_correct(1)

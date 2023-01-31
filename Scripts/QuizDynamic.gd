@@ -48,9 +48,13 @@ func get_answer(answer_num):
 func is_correct(answer_num):
 	if questions[current_question]["RespuestasCorrectas"].has(answer_num):
 		emit_signal("correct_answer")
+		print("correcta")
+		print(answer_num)
 		return true
 		
 	emit_signal("incorrect_answer")
+	print("incorrecta")
+	print(answer_num)
 	return false
 
 # Obtiene la cantidad de respuestas de la pregunta actual

@@ -104,6 +104,6 @@ icon = ExtResource( 4 )
 icon_align = 1
 
 [connection signal="pressed" from="VBox/Grid/Opt1" to="." method="_on_Opt1_pressed"]
-[connection signal="pressed" from="VBox/Grid/Opt2" to="." method="_on_Opt1_pressed"]
-[connection signal="pressed" from="VBox/Grid/Opt3" to="." method="_on_Opt1_pressed"]
-[connection signal="pressed" from="VBox/Grid/Opt4" to="." method="_on_Opt1_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt2" to="." method="_on_Opt2_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt3" to="." method="_on_Opt3_pressed"]
+[connection signal="pressed" from="VBox/Grid/Opt4" to="." method="_on_Opt4_pressed"]
