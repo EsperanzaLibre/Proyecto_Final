@@ -12,6 +12,10 @@ const player_max_life = 200 #vida maxima del player
 var enemyScoreCounter = 0 #cuento cuantos puntos obtiene el player
 var timer = true #variable que me indica si el tiempo de juego sigue activo
 var timer_pause = false #variable para pausar el tiempo del juego
+var timer_min=0 #variable que guarda el tiempo transcurrido en minutos
+var timer_sec=0 #variable que guarda el tiempo transcurrido en segundos
+var timer_mil=0 #variable que guarda el tiempo transcurrido en milisegundos
+var trivia_check = false #variable que se usa para no permitir el acceso ilimitado al hall de la trivia
 
 func _ready():
 	pass # Replace with function body.
