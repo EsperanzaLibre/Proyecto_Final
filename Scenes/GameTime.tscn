@@ -33,7 +33,6 @@ margin_top = 4.0
 margin_right = 37.0
 margin_bottom = 44.0
 script = ExtResource( 1 )
-minutes = 5
 
 [node name="Minutes" type="RichTextLabel" parent="UI/CountDown"]
 visible = false
@@ -54,18 +53,6 @@ custom_colors/selection_color = Color( 0.509804, 0.0470588, 0.0470588, 1 )
 custom_fonts/normal_font = SubResource( 4 )
 text = "0"
 
-[node name="aux1" type="RichTextLabel" parent="UI/CountDown"]
-visible = false
-anchor_left = 0.317
-anchor_right = 0.317
-margin_left = -0.68
-margin_right = 23.32
-margin_bottom = 40.0
-custom_colors/default_color = Color( 0.682353, 0.803922, 0.0823529, 1 )
-custom_colors/selection_color = Color( 0.509804, 0.0470588, 0.0470588, 1 )
-custom_fonts/normal_font = SubResource( 4 )
-text = ":"
-
 [node name="Seconds" type="RichTextLabel" parent="UI/CountDown"]
 visible = false
 margin_left = 19.0
@@ -75,16 +62,6 @@ custom_colors/default_color = Color( 0.737255, 0.827451, 0.0470588, 1 )
 custom_colors/selection_color = Color( 0.376471, 0.0470588, 0.0470588, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "0"
-
-[node name="aux2" type="RichTextLabel" parent="UI/CountDown"]
-visible = false
-margin_left = 38.0
-margin_right = 78.0
-margin_bottom = 40.0
-custom_colors/default_color = Color( 0.737255, 0.827451, 0.0470588, 1 )
-custom_colors/selection_color = Color( 0.509804, 0.0470588, 0.0470588, 1 )
-custom_fonts/normal_font = SubResource( 3 )
-text = ":"
 
 [node name="Milisec" type="RichTextLabel" parent="UI/CountDown"]
 visible = false

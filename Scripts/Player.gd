@@ -153,7 +153,6 @@ func enemyDamage(damage): #daño recibido por parte de los enemigos o armas
 			#	playerHurt.play()
 		if Global.player_life <= 0: #vuelvo a preguntar por si en el golpe anterior lo mata
 			Global.gameFinalCondition = 2
-# warning-ignore:return_value_discarded
 			get_tree().change_scene("res://Scenes/EndGame.tscn")
 			queue_free()
 
