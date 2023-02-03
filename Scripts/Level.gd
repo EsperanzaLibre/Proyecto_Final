@@ -1,7 +1,8 @@
 extends Node2D
 
 onready var player_life_bar = $ParallaxBackground/Hud/HeroIcon/HeroLifeBar
-onready var enemy_score = $ParallaxBackground/Hud/EnemyScore/Score
+onready var enemy_score = $ParallaxBackground/Hud/Score
+onready var life_counter = $ParallaxBackground/Hud/LifeCounter
 
 func _ready():
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
@@ -15,7 +16,8 @@ func _ready():
 		
 func _process(delta):
 	player_life_bar.value = Global.player_life
-	enemy_score.set_text(str(Global.enemyScoreCounter)) #actualizo el score del player
+	enemy_score.set_text("Score: "+str(Global.enemyScoreCounter)) #actualizo el score del player
+	life_counter.set_text("Life: "+str(Global.lifes)) #actualizo las vidas del jugador
 	if !Global.timer: #controlo que el timer no sea cero
 			Global.gameFinalCondition = 2
 			get_tree().change_scene("res://Scenes/EndGame.tscn")

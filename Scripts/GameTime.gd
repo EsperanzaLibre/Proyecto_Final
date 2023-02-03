@@ -50,7 +50,7 @@ func _run_Game_time():
 	
 	
 	#utilizo una sola variable para poder mostrar todo en un control, queda mucho mas prolijo que mostrar todos
-	$Game_Timer.set_text(str(timer_minutes, ": ",timer_seconds, ": ",timer_miliseconds))
+	$Game_Timer.set_text("Game Time: "+str(timer_minutes, ": ",timer_seconds, ": ",timer_miliseconds))
 	
 	if Global.timer_min <= 0 and Global.timer_sec <= 0 and dsec <= 0:
 		Global.timer = false

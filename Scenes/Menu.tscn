@@ -48,8 +48,9 @@ margin_right = 153.0
 
 [node name="Play" type="Button" parent="Menu/VBoxButtons"]
 margin_right = 306.0
-margin_bottom = 54.0
-custom_colors/font_color = Color( 0.631373, 0.0980392, 0.027451, 1 )
+margin_bottom = 48.0
+custom_colors/font_color_focus = Color( 0.188235, 0.713726, 0.0392157, 1 )
+custom_colors/font_color = Color( 0.945098, 0.0470588, 0.0470588, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Play"
 flat = true
@@ -58,10 +59,10 @@ __meta__ = {
 }
 
 [node name="Exit" type="Button" parent="Menu/VBoxButtons"]
-margin_top = 58.0
+margin_top = 52.0
 margin_right = 306.0
-margin_bottom = 112.0
-custom_colors/font_color = Color( 0.643137, 0.156863, 0.027451, 1 )
+margin_bottom = 100.0
+custom_colors/font_color = Color( 0.945098, 0.0470588, 0.0470588, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Exit"
 flat = true

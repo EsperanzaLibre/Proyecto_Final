@@ -23,4 +23,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey and event.scancode == KEY_R:#si presiono R reinicio el juego
+		player_initial_map_position = Vector2(80, 460)
+		lifes = 3
+		enemyScoreCounter = 0
 		get_tree().change_scene("res://Scenes/Levels/Level.tscn")

@@ -3,8 +3,8 @@
 [ext_resource path="res://Assets/alagard.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 50
+resource_local_to_scene = true
+size = 43
 outline_size = 2
-outline_color = Color( 0.878431, 0.862745, 0.0823529, 1 )
-use_filter = true
+outline_color = Color( 0.517647, 0.505882, 0.0313726, 1 )
 font_data = ExtResource( 1 )

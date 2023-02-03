@@ -1,12 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/GameTime.gd" type="Script" id=1]
 [ext_resource path="res://Assets/alagard.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Angel wish.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 22
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 22
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -45,13 +54,13 @@ custom_fonts/normal_font = SubResource( 4 )
 text = "0"
 
 [node name="Game_Timer" type="RichTextLabel" parent="UI/CountDown"]
-margin_left = -1.0
-margin_right = 99.0
+margin_left = -74.0
+margin_top = -2.0
+margin_right = 195.0
 margin_bottom = 21.0
-custom_colors/default_color = Color( 0.627451, 0.733333, 0.027451, 1 )
-custom_colors/selection_color = Color( 0.509804, 0.0470588, 0.0470588, 1 )
-custom_fonts/normal_font = SubResource( 4 )
-text = "0"
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "Game Time: 0"
 
 [node name="Seconds" type="RichTextLabel" parent="UI/CountDown"]
 visible = false
@@ -78,6 +87,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="TimeText" type="Label" parent="UI"]
+visible = false
 margin_left = -78.0
 margin_right = -38.0
 margin_bottom = 14.0
