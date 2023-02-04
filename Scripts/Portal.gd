@@ -19,6 +19,11 @@ func _on_Portal_body_entered(body):
 	Global.player_initial_map_position = player_spawn_location
 	Global.player_facing_direction = player_direction
 	Global.triviaCorrectAnswers = 0 #vuelvo a cero el contador de respuestas correctas
+	Global.enemyScoreCounter = 0
+	Global.trivia_check = false
+	Global.timer_min=5
+	Global.timer_sec=0
+	Global.timer_mil=0
 	if get_tree().change_scene(next_scene_path) != OK:
 		print ("Error: La escena no se pudo cargar")
 		

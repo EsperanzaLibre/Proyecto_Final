@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 export (PackedScene) var Hit = preload("res://Scenes/Hit.tscn")#traigo la escena del golpe
-var floaty_text_scene = preload("res://Scenes/FloatingText.tscn")
 
 export var hitTime = 2.0 #tiempo por disparo
 export var hitWait = 0.5 #tiempo de espera hasta el proximo disparo
@@ -141,11 +140,11 @@ func _jump():
 			
 func enemyDamage(damage): #daño recibido por parte de los enemigos o armas
 	if damage==0:
-		_on_CreateFloatingTextButton("Miss", position.x, position.y)
+		Global._on_CreateFloatingTextButtonGlobal("Miss", position.x, position.y, 2, 1.0)
 	else:
 		if Global.player_life > 0: #si es mas de cero le resto vida
 			flickerFlash()
-			_on_CreateFloatingTextButton("Damage - " + str(damage), position.x, position.y)
+			Global._on_CreateFloatingTextButtonGlobal("Damage - " + str(damage), position.x, position.y, 2, 1.0)
 			Global.player_life -= damage
 			
 			print(Global.player_life)
@@ -177,18 +176,6 @@ func _on_PlayerBody_area_entered(area):
 	if area.is_in_group("Hit"): #pregunto si lo que entra en el area es un shuriken
 		if !playerCollision: #si recibio un golpe recientemente espera un rato
 			enemyDamage(area.hitDamage)
-
-func _on_CreateFloatingTextButton(text, x, y): #texto flotante para mostrar los diferentes mensajes
-	var floaty_text = floaty_text_scene.instance()
-	
-	floaty_text.typeText = 2 #color del texto
-	floaty_text.position = Vector2(x, y) #posiciona el texto flotante donde esta el nodo generador
-	floaty_text.velocity = Vector2(rand_range(-50, 50), -100) #velocidad de movimiento
-	floaty_text.modulate = Color(rand_range(0.7, 1), rand_range(0.7, 1), rand_range(0.7, 1), 1.0)
-	
-	floaty_text.text = text #texto a mostrar
-		
-	get_parent().add_child(floaty_text)
 
 func powerUp():
 	if Global.triviaCorrectAnswers == 3 && powerUpOn:

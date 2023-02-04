@@ -5,6 +5,7 @@ extends Area2D
 export(String, FILE) var next_scene_path = ""
 export(Vector2) var player_spawn_location = Vector2.ZERO
 export(int) var player_direction = 1
+var floaty_text_scene = preload("res://Scenes/FloatingText.tscn")
 
 var hero_body = null
 
@@ -27,13 +28,16 @@ func _physics_process(delta):
 				get_tree().change_scene(next_scene_path) #cambio de escena
 			else:
 				print("Sale del hall de la trivia")
+				Global.show_text = true
 				print(Global.scene_to_back)
 				Global.player_initial_map_position = Global.player_door_map_position #asigno la posicion de la puerta al player
 				get_tree().change_scene(Global.scene_to_back) #regreso a la escena anterior
 				Global.trivia_check = true #cambio a true para que no intente entrar nuevamente
 				Global.scene_to_back = "" #Libero la variable global
 		else:
-			print("Ya entró al hall en este nivel")
+			if Global.show_text:
+				Global._on_CreateFloatingTextButtonGlobal("Ya entro al hall en este nivel", position.x, position.y, 5, 3.0)
+				Global.show_text = false
 
 func _on_Door_body_entered(body):
 	if body.is_in_group("Player"): #si el body esta en el grupo player entro al if

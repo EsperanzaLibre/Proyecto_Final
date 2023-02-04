@@ -21,7 +21,6 @@ export var maxFlips = 5 #cantidad de rebotes que hace antes de esperar
 export var enemyType = 0 #Tipo de enemigo
 
 var rng = RandomNumberGenerator.new()
-var floaty_text_scene = preload("res://Scenes/FloatingText.tscn")
 var distance = 120 # Distancia entre el enemigo y el player
 var counterFlips = 0 #contador de flips
 var motion := Vector2()
@@ -239,7 +238,7 @@ func _on_EnemyBody_area_entered(area):
 		#	enemyHurt.play()
 		if enemyLife > 0: #si es mas de cero le resto vida
 			enemyLife -= area.hitDamage
-			_on_CreateFloatingTextButton("Damage -" + str(area.hitDamage), position.x, position.y)
+			Global._on_CreateFloatingTextButtonGlobal("Damage -" + str(area.hitDamage), position.x, position.y, 1, 1.0)
 			flickerFlash()
 			lifeBar.value = enemyLife
 		
@@ -272,7 +271,7 @@ func hit():
 				
 			hit_instance.hitDamageCritic = false
 		else:
-			_on_CreateFloatingTextButton("CRITIC!!!", position.x - 30, position.y - 30)
+			Global._on_CreateFloatingTextButtonGlobal("CRITIC!!!", position.x - 30, position.y - 30, 5, 1.0)
 			animationPlayer.play("attack2")
 			hit_instance.hitDamageCritic = true
 			
@@ -291,15 +290,3 @@ func flickerFlash():
 	sprite.material.set_shader_param("flashModifier",1)
 	sprite.material.set_shader_param("changeSprite",true)
 	flashTimer.start()
-
-func _on_CreateFloatingTextButton(text, x, y):
-	var floaty_text = floaty_text_scene.instance()
-
-	floaty_text.typeText = 1 #color del texto
-	floaty_text.position = Vector2(x, y) #posiciona el texto flotante donde esta el nodo generador
-	floaty_text.velocity = Vector2(rand_range(-50, 50), -100) #velocidad de movimiento
-	floaty_text.modulate = Color(rand_range(0.7, 1), rand_range(0.7, 1), rand_range(0.7, 1), 1.0)
-	
-	floaty_text.text = text #texto a mostrar
-	
-	get_parent().add_child(floaty_text)
