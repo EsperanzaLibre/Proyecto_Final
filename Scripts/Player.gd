@@ -28,7 +28,6 @@ var hitDirecction = 1
 var hitType = 9
 var idleSide = 2 #variable para determinar donde debe mirar en idle y para ver donde sale el disparo
 var playerCollision = false
-var powerUpOn
 var motion = Vector2.ZERO
 
 
@@ -36,7 +35,6 @@ func _ready():
 	#arranco el juego con una animacion intro
 	#no es requerido pero es para probar las funcionalidades
 	animationPlayer.play("idle")
-	powerUpOn = true
 	dust.gravity.y = gravity
 	
 	self.global_position = Global.player_initial_map_position
@@ -44,7 +42,8 @@ func _ready():
 		sprite.flip_h = false
 	else:
 		sprite.flip_h = true
-	if Global.triviaCorrectAnswers == 3:
+	
+	if Global.triviaCorrectAnswers >= 3:
 		sprite.texture = ResourceLoader.load("res://Assets/hero_power_up.png")
 	else:
 		sprite.texture = ResourceLoader.load("res://Assets/hero.png")
@@ -178,7 +177,6 @@ func _on_PlayerBody_area_entered(area):
 			enemyDamage(area.hitDamage)
 
 func powerUp():
-	if Global.triviaCorrectAnswers == 3 && powerUpOn:
+	if Global.triviaCorrectAnswers == 3:
 		sprite.texture = ResourceLoader.load("res://Assets/hero_power_up.png")
-		powerUpOn = false
 		animationPlayer.play("power")
