@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/MenuButton.gd" type="Script" id=5]
 [ext_resource path="res://Assets/assets-menu/2.png" type="Texture" id=6]
 [ext_resource path="res://Assets/assets-menu/4.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/ParallaxLayer2.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/ParallaxLayer.gd" type="Script" id=8]
 [ext_resource path="res://Assets/assets-menu/kisspng-line-black-and-white-angle-point-pattern-white-glow-effect-vector-5a7bbc9d50a178.9392208815180586533303.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=3]

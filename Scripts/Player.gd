@@ -9,7 +9,6 @@ onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var flashTimer = $FlashTimer
 onready var dust = $dust
-#onready var heroLifeBar = $#$Hud/HeroIcon/HeroLifeBar
 
 const moveSpeed = 70
 const maxSpeed = 220
@@ -17,9 +16,7 @@ const maxSpeed = 220
 const jumpHeight = 320
 const gravity = 22
 const up = Vector2(0,-1)
-#const playerMaxLife = 200 #Vida del player
 
-#var playerLife = Global.player_life #Vida del player
 var maxJump = 2 #saltos permitidos
 var jump = 0 #contador de saltos
 var onFloor = true #control si toca el piso
@@ -30,9 +27,8 @@ var idleSide = 2 #variable para determinar donde debe mirar en idle y para ver d
 var playerCollision = false
 var motion = Vector2.ZERO
 
-
 func _ready():
-	#arranco el juego con una animacion intro
+	#comienzo el juego con una animacion intro
 	#no es requerido pero es para probar las funcionalidades
 	animationPlayer.play("idle")
 	dust.gravity.y = gravity
@@ -94,12 +90,6 @@ func _move():
 						animationPlayer.play("idle")
 					else:
 						animationPlayer.play("jump")
-				
-		#if (!animationPlayer.current_animation=="power" || !animationPlayer.current_animation=="attack"):#pregunto si la animacion que esta corriendo es el power
-		#	if is_on_floor():
-		#		animationPlayer.play("idle")
-		#	else:
-		#		animationPlayer.play("jump")
 	
 func hit(): #funcion que controla el golpe
 	if (hitTime >= hitWait):
@@ -165,7 +155,6 @@ func _on_FlashTimer_timeout():
 	sprite.material.set_shader_param("changeSprite",false)
 	playerCollision = false
 
-
 func _on_PlayerBody_body_entered(body):
 	if body.is_in_group("Enemies"):
 		if !playerCollision: #si recibio un golpe recientemente espera un rato
@@ -176,7 +165,7 @@ func _on_PlayerBody_area_entered(area):
 		if !playerCollision: #si recibio un golpe recientemente espera un rato
 			enemyDamage(area.hitDamage)
 
-func powerUp():
+func powerUp(): #cuando el heroe alcanza las 3 respuestas correctas obtiene el power up
 	if Global.triviaCorrectAnswers == 3:
 		sprite.texture = ResourceLoader.load("res://Assets/hero_power_up.png")
 		animationPlayer.play("power")

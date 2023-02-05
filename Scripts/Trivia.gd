@@ -42,7 +42,7 @@ func check_trivia():
 	if questions > 0:
 		questions -= 1
 		wait_for_next_question()
-	elif Global.triviaCorrectAnswers == 3:
+	elif Global.triviaCorrectAnswers >= 3:
 		contenedor.text = "Has Ganado un poder especial y vida completa"
 		Global.player_life = Global.player_max_life
 		yield(get_tree().create_timer(3.0), "timeout")

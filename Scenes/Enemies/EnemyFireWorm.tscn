@@ -5,7 +5,6 @@
 [ext_resource path="res://Assets/lifebar_green.png" type="Texture" id=3]
 [ext_resource path="res://Assets/lifebar_red.png" type="Texture" id=4]
 [ext_resource path="res://Assets/lifebar_black.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Angel wish.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=7]
 
 [sub_resource type="CircleShape2D" id=11]
@@ -107,9 +106,14 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 13, 20 )
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFontData" id=21]
+resource_local_to_scene = true
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+resource_local_to_scene = true
 size = 14
-font_data = ExtResource( 6 )
+font_data = SubResource( 21 )
 
 [node name="EnemyFireWorm" type="KinematicBody2D" groups=["Enemies"]]
 position = Vector2( 0, -2 )
@@ -177,7 +181,7 @@ margin_top = -56.0
 margin_right = 42.0
 margin_bottom = -29.0
 custom_colors/font_color = Color( 0.0784314, 0.168627, 0.0784314, 1 )
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 20 )
 text = "Test"
 align = 1
 valign = 1
