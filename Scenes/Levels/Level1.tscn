@@ -1,31 +1,31 @@
 [gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Scripts/ParallaxLayer.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Enemies/EnemyMage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/PowerUp.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Enemies/EnemyHuntress.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/glacial_mountains.png" type="Texture" id=5]
-[ext_resource path="res://Assets/assets level1/fondo-city.png" type="Texture" id=6]
-[ext_resource path="res://Assets/assets level1/tileassets1.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Checkpoint.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Enemies/EnemyHero.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/water.gd" type="Script" id=15]
-[ext_resource path="res://icono.png" type="Texture" id=16]
-[ext_resource path="res://Assets/assets level1/Background.png" type="Texture" id=17]
-[ext_resource path="res://Assets/assets level1/BG3.png" type="Texture" id=18]
-[ext_resource path="res://Scenes/Enemies/EnemyFlyingEye.tscn" type="PackedScene" id=19]
+[ext_resource path="res://icono.png" type="Texture" id=1]
+[ext_resource path="res://Assets/hero_icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/health_bar.png" type="Texture" id=3]
+[ext_resource path="res://Assets/assets level1/Background.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar_background.png" type="Texture" id=5]
+[ext_resource path="res://Assets/assets level1/BG3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/ParallaxLayer.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/water.gd" type="Script" id=10]
+[ext_resource path="res://Assets/assets level1/tileassets1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/glacial_mountains.png" type="Texture" id=12]
+[ext_resource path="res://Assets/assets level1/fondo-city.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemies/EnemyMage.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/PowerUp.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/GameTime.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Enemies/EnemyFlyingEye.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Enemies/EnemyHero.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Enemies/EnemyMushroom.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/GameTime.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar_background.png" type="Texture" id=23]
-[ext_resource path="res://Assets/hero_icon.png" type="Texture" id=24]
-[ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/health_bar.png" type="Texture" id=25]
-[ext_resource path="res://Scripts/Level.gd" type="Script" id=26]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Checkpoint.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Enemies/EnemyHuntress.tscn" type="PackedScene" id=24]
 
-[sub_resource type="DynamicFontData" id=70]
+[sub_resource type="DynamicFontData" id=69]
 resource_local_to_scene = true
 font_path = "res://Assets/fonts/beachday.ttf"
 
@@ -34,9 +34,9 @@ resource_local_to_scene = true
 size = 22
 outline_size = 2
 outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 70 )
+font_data = SubResource( 69 )
 
-[sub_resource type="DynamicFontData" id=69]
+[sub_resource type="DynamicFontData" id=70]
 antialiased = false
 font_path = "res://Assets/fonts/beachday.ttf"
 
@@ -45,7 +45,7 @@ resource_local_to_scene = true
 size = 22
 outline_size = 2
 outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 69 )
+font_data = SubResource( 70 )
 
 [sub_resource type="ConvexPolygonShape2D" id=53]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
@@ -85,7 +85,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=49]
 0/name = "tileassets1.png 0"
-0/texture = ExtResource( 9 )
+0/texture = ExtResource( 11 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 36, 14, 64, 32 )
@@ -106,7 +106,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 1/name = "tileassets1.png 1"
-1/texture = ExtResource( 9 )
+1/texture = ExtResource( 11 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 4, 14, 32, 32 )
@@ -127,7 +127,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 2/name = "tileassets1.png 2"
-2/texture = ExtResource( 9 )
+2/texture = ExtResource( 11 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 100, -18, 32, 32 )
@@ -148,7 +148,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 2/z_index = 0
 4/name = "tileassets1.png 4"
-4/texture = ExtResource( 9 )
+4/texture = ExtResource( 11 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 36, 46, 64, 32 )
@@ -162,7 +162,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 4/shapes = [  ]
 4/z_index = 0
 6/name = "tileassets1.png 6"
-6/texture = ExtResource( 9 )
+6/texture = ExtResource( 11 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 36, 78, 64, 32 )
@@ -176,7 +176,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "tileassets1.png 7"
-7/texture = ExtResource( 9 )
+7/texture = ExtResource( 11 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 36, 110, 64, 32 )
@@ -190,7 +190,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 7/shapes = [  ]
 7/z_index = 0
 10/name = "tileassets1.png 10"
-10/texture = ExtResource( 9 )
+10/texture = ExtResource( 11 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 36, 147, 64, 32 )
@@ -211,7 +211,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 10/z_index = 0
 11/name = "tileassets1.png 11"
-11/texture = ExtResource( 9 )
+11/texture = ExtResource( 11 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 4, 147, 32, 32 )
@@ -232,7 +232,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 11/z_index = 0
 12/name = "tileassets1.png 12"
-12/texture = ExtResource( 9 )
+12/texture = ExtResource( 11 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 100, 147, 32, 32 )
@@ -253,7 +253,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 12/z_index = 0
 13/name = "tileassets1.png 13"
-13/texture = ExtResource( 9 )
+13/texture = ExtResource( 11 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 36, 179, 64, 32 )
@@ -274,7 +274,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 13/z_index = 0
 16/name = "tileassets1.png 16"
-16/texture = ExtResource( 9 )
+16/texture = ExtResource( 11 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 36, 211, 64, 32 )
@@ -288,7 +288,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 16/shapes = [  ]
 16/z_index = 0
 19/name = "tileassets1.png 19"
-19/texture = ExtResource( 9 )
+19/texture = ExtResource( 11 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 99, 14, 32, 32 )
@@ -309,7 +309,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 19/z_index = 0
 21/name = "tileassets1.png 21"
-21/texture = ExtResource( 9 )
+21/texture = ExtResource( 11 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 515, 270, 32, 32 )
@@ -323,7 +323,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 21/shapes = [  ]
 21/z_index = 0
 22/name = "tileassets1.png 22"
-22/texture = ExtResource( 9 )
+22/texture = ExtResource( 11 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 824, 336, 192, 256 )
@@ -337,7 +337,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 22/shapes = [  ]
 22/z_index = 0
 23/name = "tileassets1.png 23"
-23/texture = ExtResource( 9 )
+23/texture = ExtResource( 11 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 539, 144, 32, 32 )
@@ -351,7 +351,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 23/shapes = [  ]
 23/z_index = 0
 24/name = "tileassets1.png 24"
-24/texture = ExtResource( 9 )
+24/texture = ExtResource( 11 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 539, 144, 32, 32 )
@@ -372,7 +372,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 24/z_index = 0
 25/name = "tileassets1.png 25"
-25/texture = ExtResource( 9 )
+25/texture = ExtResource( 11 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 443, 144, 32, 32 )
@@ -393,7 +393,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 25/z_index = 0
 26/name = "tileassets1.png 26"
-26/texture = ExtResource( 9 )
+26/texture = ExtResource( 11 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 475, 144, 32, 32 )
@@ -414,7 +414,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 26/z_index = 0
 27/name = "tileassets1.png 27"
-27/texture = ExtResource( 9 )
+27/texture = ExtResource( 11 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 507, 144, 32, 32 )
@@ -435,7 +435,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 27/z_index = 0
 28/name = "tileassets1.png 28"
-28/texture = ExtResource( 9 )
+28/texture = ExtResource( 11 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 192, 32, 32 )
@@ -449,7 +449,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 28/shapes = [  ]
 28/z_index = 0
 29/name = "tileassets1.png 29"
-29/texture = ExtResource( 9 )
+29/texture = ExtResource( 11 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 578, 224, 64 )
@@ -508,15 +508,15 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 2.11893
+shader_param/zoom = 1.18921
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
 shader_param/speed = 0.1
 shader_param/noise = SubResource( 40 )
 
-[node name="Level" type="Node2D"]
-script = ExtResource( 26 )
+[node name="Level1" type="Node2D"]
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
@@ -524,7 +524,7 @@ __meta__ = {
 [node name="Fondo-city" type="Sprite" parent="."]
 position = Vector2( 602.68, 357.5 )
 scale = Vector2( 0.561475, 0.561475 )
-texture = ExtResource( 6 )
+texture = ExtResource( 13 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0 )
@@ -533,13 +533,13 @@ scroll_ignore_camera_zoom = true
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
 motion_mirroring = Vector2( 1647, 0 )
-script = ExtResource( 1 )
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color( 0.784314, 0.694118, 0.827451, 1 )
 position = Vector2( 772, 228 )
 scale = Vector2( 4.90327, 4.09896 )
-texture = ExtResource( 17 )
+texture = ExtResource( 4 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.2, 1 )
@@ -549,7 +549,7 @@ motion_mirroring = Vector2( 987, 0 )
 modulate = Color( 0.721569, 0.827451, 0.787745, 1 )
 position = Vector2( 495.056, 284.75 )
 scale = Vector2( 2.682, 2.57176 )
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.1, 1 )
@@ -559,18 +559,18 @@ motion_mirroring = Vector2( 970, 0 )
 modulate = Color( 0.564706, 0.698039, 0.615686, 1 )
 position = Vector2( 476.458, 378.875 )
 scale = Vector2( 3.04713, 2.40495 )
-texture = ExtResource( 18 )
+texture = ExtResource( 6 )
 
 [node name="Hud" type="Node2D" parent="ParallaxBackground"]
 position = Vector2( 23, 7 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 21 )]
+[node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 17 )]
 position = Vector2( 10, 100 )
 
 [node name="HeroIcon" type="Sprite" parent="ParallaxBackground/Hud"]
 position = Vector2( 33, 40 )
-texture = ExtResource( 24 )
+texture = ExtResource( 2 )
 
 [node name="HeroLifeBar" type="TextureProgress" parent="ParallaxBackground/Hud/HeroIcon"]
 margin_left = 30.0
@@ -578,12 +578,12 @@ margin_top = -3.0
 margin_right = 130.0
 margin_bottom = 4.0
 value = 100.0
-texture_under = ExtResource( 23 )
-texture_progress = ExtResource( 25 )
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 3 )
 
 [node name="Bar" type="Sprite" parent="ParallaxBackground/Hud/HeroIcon"]
 position = Vector2( 79, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 7 )
 
 [node name="LifeCounter" type="RichTextLabel" parent="ParallaxBackground/Hud"]
 margin_left = 13.0
@@ -618,7 +618,7 @@ position = Vector2( 0, 85 )
 position = Vector2( 6159.75, 607 )
 shape = SubResource( 52 )
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
+[node name="Player" parent="." instance=ExtResource( 14 )]
 position = Vector2( 77, 496 )
 scale = Vector2( 1.6, 1.6 )
 collision_layer = 2
@@ -644,19 +644,19 @@ editor_draw_drag_margin = true
 material = SubResource( 41 )
 position = Vector2( 6119.5, 751 )
 scale = Vector2( 192.891, 4.5 )
-texture = ExtResource( 16 )
-script = ExtResource( 15 )
+texture = ExtResource( 1 )
+script = ExtResource( 10 )
 
-[node name="Portal" parent="." instance=ExtResource( 14 )]
+[node name="Portal" parent="." instance=ExtResource( 21 )]
 position = Vector2( 14877, 552 )
-next_scene_path = "res://Scenes/Levels/Level2.tscn"
+next_scene_path = "res://Scenes/loadingScene.tscn"
 player_spawn_location = Vector2( 80, 450 )
 player_direction = 2
 
-[node name="Checkpoint" parent="." instance=ExtResource( 12 )]
+[node name="Checkpoint" parent="." instance=ExtResource( 22 )]
 position = Vector2( 2243, 378 )
 
-[node name="Door" parent="." instance=ExtResource( 11 )]
+[node name="Door" parent="." instance=ExtResource( 23 )]
 position = Vector2( 2034, 379 )
 next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
 player_spawn_location = Vector2( 75, 214 )
@@ -667,23 +667,23 @@ player_spawn_location = Vector2( 75, 214 )
 position = Vector2( 3131, 511 )
 enemyType = 10
 
-[node name="EnemyFlyingEye" parent="Enemy" instance=ExtResource( 19 )]
+[node name="EnemyFlyingEye" parent="Enemy" instance=ExtResource( 18 )]
 position = Vector2( 1801, 457 )
 enemyType = 3
 
-[node name="EnemyHuntress" parent="Enemy" instance=ExtResource( 4 )]
+[node name="EnemyHuntress" parent="Enemy" instance=ExtResource( 24 )]
 position = Vector2( 4733, 493 )
 enemyType = 6
 
-[node name="EnemyHero" parent="Enemy" instance=ExtResource( 13 )]
+[node name="EnemyHero" parent="Enemy" instance=ExtResource( 19 )]
 position = Vector2( 2393, 378 )
 enemyType = 5
 
-[node name="EnemyMage" parent="Enemy" instance=ExtResource( 2 )]
+[node name="EnemyMage" parent="Enemy" instance=ExtResource( 15 )]
 position = Vector2( 14696, 556 )
 enemyType = 8
 
-[node name="PowerUp" parent="." instance=ExtResource( 3 )]
+[node name="PowerUp" parent="." instance=ExtResource( 16 )]
 position = Vector2( 938, 471 )
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]

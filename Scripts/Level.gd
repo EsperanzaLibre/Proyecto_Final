@@ -12,13 +12,16 @@ func _ready():
 		Global.timer_min = 5 #si el level inicia se coloca el tiempo inicial
 		Global.timer_sec = 0
 		Global.timer_mil = 0
+		Global.enemyScoreCounter = 0
+		Global.lifes = 3
 	else:
 		Global.timer_pause = false #si es verdadero el nivel viene de la trivia
 		
 func _process(delta):
 	player_life_bar.value = Global.player_life
-	enemy_score.set_text("Score: "+str(Global.enemyScoreCounter)) #actualizo el score del player
-	life_counter.set_text("Life: "+str(Global.lifes)) #actualizo las vidas del jugador
+	if !Global.enemyScoreCounter==null:
+		enemy_score.set_text("Score: "+str(Global.enemyScoreCounter)) #actualizo el score del player
+		life_counter.set_text("Life: "+str(Global.lifes)) #actualizo las vidas del jugador
 	if !Global.timer || Global.lifes == 0: #controlo que pueda seguir jugando
 			Global.gameFinalCondition = 2
 			get_tree().change_scene("res://Scenes/EndGame.tscn")

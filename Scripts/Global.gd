@@ -2,6 +2,7 @@ extends Node
 #Para usar un script global se debe declarar en Configuracion de Proyecto->Autoload
 
 var floaty_text_scene = preload("res://Scenes/FloatingText.tscn")
+var level_number = 1 #indico numero de nivel
 var player_initial_map_position = Vector2(80, 460)
 var player_door_map_position = Vector2.ZERO
 var scene_to_back = ""

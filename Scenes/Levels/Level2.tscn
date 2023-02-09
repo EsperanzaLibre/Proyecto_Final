@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/assets level2/mainlev_build.png" type="Texture" id=5]
@@ -438,21 +438,27 @@ extents = Vector2( 157.5, 30.5 )
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 952.5, 25.5 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=70]
 resource_local_to_scene = true
 font_path = "res://Assets/fonts/beachday.ttf"
 
-[sub_resource type="DynamicFont" id=43]
+[sub_resource type="DynamicFont" id=71]
+resource_local_to_scene = true
 size = 22
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 3 )
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 70 )
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFontData" id=69]
+antialiased = false
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=72]
+resource_local_to_scene = true
 size = 22
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 3 )
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 69 )
 
 [node name="Level2" type="Node2D"]
 script = ExtResource( 1 )
@@ -495,12 +501,11 @@ scale = Vector2( 2.682, 2.57176 )
 texture = ExtResource( 11 )
 
 [node name="Hud" type="Node2D" parent="ParallaxBackground"]
-position = Vector2( 30, 27 )
+position = Vector2( 23, 7 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 17 )]
-position = Vector2( 10, 85.25 )
-scale = Vector2( 1.25, 1.25 )
+position = Vector2( 10, 100 )
 
 [node name="HeroIcon" type="Sprite" parent="ParallaxBackground/Hud"]
 position = Vector2( 33, 40 )
@@ -519,22 +524,24 @@ texture_progress = ExtResource( 13 )
 position = Vector2( 79, 0.5 )
 texture = ExtResource( 16 )
 
-[node name="EnemyScore" type="Label" parent="ParallaxBackground/Hud"]
-margin_left = 12.5
-margin_top = 131.5
-margin_right = 55.5
-margin_bottom = 154.5
-custom_colors/font_color = Color( 0.839216, 0.886275, 0.0392157, 1 )
-custom_fonts/font = SubResource( 43 )
-text = "Score:"
+[node name="LifeCounter" type="RichTextLabel" parent="ParallaxBackground/Hud"]
+margin_left = 13.0
+margin_top = 161.0
+margin_right = 124.0
+margin_bottom = 186.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 71 )
+text = "Life:"
 
-[node name="Score" type="RichTextLabel" parent="ParallaxBackground/Hud/EnemyScore"]
-margin_left = 47.5
-margin_right = 87.5
-margin_bottom = 40.0
-custom_colors/default_color = Color( 0.890196, 1, 0.0431373, 1 )
-custom_fonts/normal_font = SubResource( 44 )
-text = "o"
+[node name="Score" type="RichTextLabel" parent="ParallaxBackground/Hud"]
+margin_left = 11.0
+margin_top = 131.0
+margin_right = 123.0
+margin_bottom = 171.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 72 )
+text = "Score: "
+deselect_on_focus_loss_enabled = false
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 17, 447 )
@@ -544,7 +551,7 @@ player_direction = -1
 
 [node name="Portal2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4761, 1286 )
-next_scene_path = "res://Scenes/Levels/Level3.tscn"
+next_scene_path = "res://Scenes/loadingScene.tscn"
 player_spawn_location = Vector2( 125, 458 )
 
 [node name="Door" parent="." instance=ExtResource( 9 )]
