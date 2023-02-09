@@ -51,6 +51,11 @@ position = Vector2( 520, 292 )
 scale = Vector2( 2.169, 1.5365 )
 texture = ExtResource( 9 )
 
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 28, 28 )
+scale = Vector2( 0.042623, 0.0427097 )
+texture = ExtResource( 3 )
+
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.5, 0 )
 motion_mirroring = Vector2( 1100, 0 )
@@ -108,11 +113,6 @@ flat = true
 __meta__ = {
 "_editor_description_": "Exit"
 }
-
-[node name="Icon" type="Sprite" parent="Menu/VBoxButtons/Exit"]
-position = Vector2( -347.113, -466.938 )
-scale = Vector2( 0.042623, 0.0427097 )
-texture = ExtResource( 3 )
 
 [node name="Titulo" type="Label" parent="Menu"]
 anchor_left = 0.5

@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/fonts/beachday.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/loadingScene.gd" type="Script" id=3]
+[ext_resource path="res://Assets/assets-menu/1.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.933333, 0.584314, 0.305882, 1 )
+
+[node name="loadingScene" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Bakground" type="Sprite" parent="."]
+position = Vector2( 506, 302.5 )
+scale = Vector2( 1.92361, 2.01543 )
+texture = ExtResource( 4 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 361.0
+margin_top = 265.0
+margin_right = 705.0
+margin_bottom = 296.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 2 )
+value = 50.0
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 28, 28 )
+scale = Vector2( 0.042623, 0.0427097 )
+texture = ExtResource( 2 )
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
