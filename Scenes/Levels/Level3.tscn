@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Medieval castle/oak_woods_v1.0/background/background_layer_1.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Checkpoint.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/GameTime.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/light.png" type="Texture" id=12]
 [ext_resource path="res://Assets/assets-level3/plx-1.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFontData" id=43]
@@ -673,6 +674,9 @@ extents = Vector2( 2400.5, 17.5 )
 [node name="Level3" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="Darkness" type="CanvasModulate" parent="."]
+color = Color( 0.117647, 0.117647, 0.117647, 1 )
+
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 44, 448 )
 scale = Vector2( 1.2, 1.2 )
@@ -781,6 +785,12 @@ drag_margin_right = 0.0
 drag_margin_bottom = 0.33
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="Light2D" type="Light2D" parent="Player"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 12 )
+color = Color( 0.85098, 0.72549, 0.6, 1 )
+range_height = 1.0
 
 [node name="Niebla" type="Sprite" parent="."]
 modulate = Color( 0.129412, 0.121569, 0.121569, 0.529412 )

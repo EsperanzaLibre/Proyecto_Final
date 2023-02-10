@@ -20,6 +20,9 @@ var timer_mil=0 #variable que guarda el tiempo transcurrido en milisegundos
 var trivia_check = false #variable que se usa para no permitir el acceso ilimitado al hall de la trivia
 var lifes = 3 #cantidad de vidas que posee el jugador
 var show_text = false #variable control para que muestre texto solo 1 vez 
+var music = true #controlo la musica ambiental 
+var fx = true #controlo los sonidos fx
+
 
 func _ready():
 	pass # Replace with function body.

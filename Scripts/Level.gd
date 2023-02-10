@@ -12,8 +12,6 @@ func _ready():
 		Global.timer_min = 5 #si el level inicia se coloca el tiempo inicial
 		Global.timer_sec = 0
 		Global.timer_mil = 0
-		Global.enemyScoreCounter = 0
-		Global.lifes = 3
 	else:
 		Global.timer_pause = false #si es verdadero el nivel viene de la trivia
 		

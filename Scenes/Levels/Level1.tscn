@@ -654,10 +654,10 @@ player_spawn_location = Vector2( 80, 450 )
 player_direction = 2
 
 [node name="Checkpoint" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2243, 378 )
+position = Vector2( 4383, 502 )
 
 [node name="Door" parent="." instance=ExtResource( 23 )]
-position = Vector2( 2034, 379 )
+position = Vector2( 2206, 376 )
 next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
 player_spawn_location = Vector2( 75, 214 )
 
@@ -684,7 +684,7 @@ position = Vector2( 14696, 556 )
 enemyType = 8
 
 [node name="PowerUp" parent="." instance=ExtResource( 16 )]
-position = Vector2( 938, 471 )
+position = Vector2( 3252, 519 )
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]
 [connection signal="item_rect_changed" from="water" to="water" method="_on_water_item_rect_changed"]
