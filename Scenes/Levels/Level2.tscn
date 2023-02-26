@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/light.png" type="Texture" id=2]
+[ext_resource path="res://Assets/audios/level2.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/assets level2/mainlev_build.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=8]
@@ -596,5 +597,10 @@ scale = Vector2( 1.2, 1.2 )
 
 [node name="Checkpoint" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2700, 1549 )
+
+[node name="BkgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.439
+autoplay = true
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]

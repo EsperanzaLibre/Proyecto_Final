@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Assets/assets-level4/wood_env.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets-level4/env_objects.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/torch.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Assets/assets-level4/anim_lights.png" type="Texture" id=24]
+[ext_resource path="res://Assets/audios/level4.mp3" type="AudioStream" id=25]
 
 [sub_resource type="DynamicFontData" id=43]
 resource_local_to_scene = true
@@ -1123,6 +1124,9 @@ extents = Vector2( 5420.5, 17.5 )
 [node name="Level4" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="Darkness" type="CanvasModulate" parent="."]
+color = Color( 0.227451, 0.129412, 0.129412, 1 )
+
 [node name="Portal" parent="." instance=ExtResource( 19 )]
 position = Vector2( 44, 448 )
 scale = Vector2( 1.2, 1.2 )
@@ -1481,6 +1485,12 @@ drag_margin_bottom = 0.33
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
+[node name="Light2D" type="Light2D" parent="Player"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+color = Color( 0.729412, 0.482353, 0.231373, 1 )
+range_height = 1.0
+
 [node name="torch" type="Node" parent="."]
 
 [node name="torch" parent="torch" instance=ExtResource( 23 )]
@@ -1592,3 +1602,8 @@ scale = Vector2( 0.0490914, 0.0490914 )
 texture = ExtResource( 5 )
 color = Color( 1, 0.898039, 0.54902, 1 )
 range_height = 1.0
+
+[node name="BkgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -10.439
+autoplay = true

@@ -22,7 +22,7 @@ var lifes = 3 #cantidad de vidas que posee el jugador
 var show_text = false #variable control para que muestre texto solo 1 vez 
 var music = true #controlo la musica ambiental 
 var fx = true #controlo los sonidos fx
-
+var control = true #variable de control para que no ingrese al if en cada proceso
 
 func _ready():
 	pass # Replace with function body.
@@ -46,3 +46,11 @@ func _on_CreateFloatingTextButtonGlobal(text, x, y, typeText, timeToShow): #text
 	floaty_text.text = text #texto a mostrar
 		
 	get_parent().add_child(floaty_text)
+
+func sounds(bkgMusic):
+	if Global.music && control:
+		control = false
+		bkgMusic.stream_paused = false #uso esta propiedad para reanudar la musica donde quedo
+	elif !Global.music:
+		bkgMusic.stream_paused = true
+		control = true

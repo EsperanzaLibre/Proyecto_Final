@@ -17,6 +17,7 @@ func _ready():
 		
 func _process(delta):
 	player_life_bar.value = Global.player_life
+	Global.sounds($BkgMusic)
 	if !Global.enemyScoreCounter==null:
 		enemy_score.set_text("Score: "+str(Global.enemyScoreCounter)) #actualizo el score del player
 		life_counter.set_text("Life: "+str(Global.lifes)) #actualizo las vidas del jugador
@@ -31,3 +32,4 @@ func _on_AreaDead_body_entered(body):
 	if body.is_in_group("Player"):
 		Global.lifes -= 1 
 		get_tree().reload_current_scene()
+

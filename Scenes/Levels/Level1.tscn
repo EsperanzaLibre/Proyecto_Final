@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://icono.png" type="Texture" id=1]
 [ext_resource path="res://Assets/hero_icon.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scenes/Checkpoint.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/Enemies/EnemyHuntress.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/audios/level1.mp3" type="AudioStream" id=25]
 
 [sub_resource type="DynamicFontData" id=69]
 resource_local_to_scene = true
@@ -508,7 +509,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 1.18921
+shader_param/zoom = 1.12246
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -562,7 +563,7 @@ scale = Vector2( 3.04713, 2.40495 )
 texture = ExtResource( 6 )
 
 [node name="Hud" type="Node2D" parent="ParallaxBackground"]
-position = Vector2( 23, 7 )
+position = Vector2( 23.0001, 7.00009 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 17 )]
@@ -685,6 +686,11 @@ enemyType = 8
 
 [node name="PowerUp" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3252, 519 )
+
+[node name="BkgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -10.439
+autoplay = true
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]
 [connection signal="item_rect_changed" from="water" to="water" method="_on_water_item_rect_changed"]
