@@ -122,10 +122,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -136.0
-margin_top = -156.0
-margin_right = 170.0
-margin_bottom = -62.0
+margin_left = -142.0
+margin_top = -190.0
+margin_right = 164.0
+margin_bottom = -60.0
 
 [node name="Play" type="Button" parent="Menu/VBoxButtons"]
 margin_right = 306.0
@@ -202,10 +202,10 @@ text = "El Prodigioso Caballero Frenetico"
 
 [node name="SoundsOfGame" type="Control" parent="Menu"]
 visible = false
-margin_left = 392.0
-margin_top = 396.0
-margin_right = 703.0
-margin_bottom = 660.0
+margin_left = 386.0
+margin_top = 374.0
+margin_right = 697.0
+margin_bottom = 638.0
 
 [node name="FxLabel" type="Label" parent="Menu/SoundsOfGame"]
 margin_left = 123.0
