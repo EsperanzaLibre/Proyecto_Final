@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/lifebar_black.png" type="Texture" id=5]
 [ext_resource path="res://Assets/fonts/beachday.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=7]
-[ext_resource path="res://Assets/audios/enemy1_hurt.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/audios/enemy5_hurt_male.mp3" type="AudioStream" id=8]
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 49.0918

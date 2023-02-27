@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hero_run.mp3-e2dbfda44d924e2b59b74ec132659b30.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/hero_run.mp3"
+dest_files=[ "res://.import/hero_run.mp3-e2dbfda44d924e2b59b74ec132659b30.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

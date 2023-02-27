@@ -26,6 +26,7 @@ var hitType = 9
 var idleSide = 2 #variable para determinar donde debe mirar en idle y para ver donde sale el disparo
 var playerCollision = false
 var motion = Vector2.ZERO
+var run_control = 0
 
 func _ready():
 	#comienzo el juego con una animacion intro
@@ -60,6 +61,10 @@ func _move():
 	if Input.is_action_pressed("ui_right"):
 		sprite.flip_h = false
 		if is_on_floor():
+			if run_control > 5:
+				Global.fx($Sounds/HeroRun)
+				run_control = 0
+			run_control += 0.1	
 			animationPlayer.play("run")
 		else:
 			animationPlayer.play("jump")
@@ -68,6 +73,10 @@ func _move():
 	elif Input.is_action_pressed("ui_left"):
 		sprite.flip_h = true
 		if is_on_floor():
+			if run_control > 5:
+				Global.fx($Sounds/HeroRun)
+				run_control = 0
+			run_control += 0.1	
 			animationPlayer.play("run")
 		else:
 			animationPlayer.play("jump")
@@ -93,7 +102,7 @@ func _move():
 	
 func hit(): #funcion que controla el golpe
 	if (hitTime >= hitWait):
-		Global.fx($AttackFx)
+		Global.fx($Sounds/AttackFx)
 		var hit_instance = Hit.instance()
 		hitTime = 0
 		match hitDirecction: #genero el golpe fuera del player para no colisionar
@@ -120,6 +129,7 @@ func _jump():
 		onFloor = false
 		if jump == 0:
 			#animacion de salto simple
+			Global.fx($Sounds/HeroJump)
 			dust.emitting = true
 			motion.y -= jumpHeight
 			jump +=1
@@ -136,7 +146,7 @@ func enemyDamage(damage): #daño recibido por parte de los enemigos o armas
 			flickerFlash()
 			Global._on_CreateFloatingTextButtonGlobal("Damage - " + str(damage), position.x, position.y, 2, 1.0)
 			Global.player_life -= damage
-			Global.fx($HeroHurt)
+			Global.fx($Sounds/HeroHurt)
 			print(Global.player_life)
 
 		if Global.player_life <= 0: #vuelvo a preguntar por si en el golpe anterior lo mata

@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/hero.png" type="Texture" id=2]
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=3]
 [ext_resource path="res://Assets/audios/sword_attack.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/audios/hero_hurt.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Assets/audios/hero_jump.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Assets/audios/hero_run.mp3" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 3 )
@@ -186,11 +188,20 @@ scale_amount = 1.8
 scale_amount_curve = SubResource( 11 )
 color = Color( 0.815686, 0.792157, 0.670588, 1 )
 
-[node name="AttackFx" type="AudioStreamPlayer" parent="."]
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="AttackFx" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 4 )
 
-[node name="HeroHurt" type="AudioStreamPlayer" parent="."]
+[node name="HeroHurt" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
+
+[node name="HeroJump" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 6 )
+
+[node name="HeroRun" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 7 )
+volume_db = -11.361
 
 [connection signal="area_entered" from="PlayerBody" to="." method="_on_PlayerBody_area_entered"]
 [connection signal="body_entered" from="PlayerBody" to="." method="_on_PlayerBody_body_entered"]

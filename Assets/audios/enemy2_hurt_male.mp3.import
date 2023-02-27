@@ -11,5 +11,5 @@ dest_files=[ "res://.import/enemy2_hurt_male.mp3-cb33951933e6bece1a0c9ae9f14d464
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

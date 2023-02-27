@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/lifebar_black.png" type="Texture" id=5]
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=6]
 [ext_resource path="res://Assets/fonts/beachday.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Assets/audios/enemy3_hurt.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/audios/enemy3_hurt_male.mp3" type="AudioStream" id=8]
 
 [sub_resource type="ShaderMaterial" id=18]
 shader = ExtResource( 6 )
