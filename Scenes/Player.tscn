@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/hero.png" type="Texture" id=2]
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=3]
+[ext_resource path="res://Assets/audios/sword_attack.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/audios/hero_hurt.mp3" type="AudioStream" id=5]
 
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 3 )
@@ -166,7 +168,7 @@ shape = SubResource( 9 )
 
 [node name="FlashTimer" type="Timer" parent="."]
 
-[node name="dust" type="CPUParticles2D" parent="."]
+[node name="Dust" type="CPUParticles2D" parent="."]
 position = Vector2( -1, 12 )
 emitting = false
 amount = 16
@@ -183,6 +185,12 @@ initial_velocity = 50.0
 scale_amount = 1.8
 scale_amount_curve = SubResource( 11 )
 color = Color( 0.815686, 0.792157, 0.670588, 1 )
+
+[node name="AttackFx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="HeroHurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="area_entered" from="PlayerBody" to="." method="_on_PlayerBody_area_entered"]
 [connection signal="body_entered" from="PlayerBody" to="." method="_on_PlayerBody_body_entered"]

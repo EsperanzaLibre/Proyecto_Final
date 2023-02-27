@@ -24,6 +24,7 @@ var music = true #controlo la musica ambiental
 var fx = true #controlo los sonidos fx
 var control = true #variable de control para que no ingrese al if en cada proceso
 
+
 func _ready():
 	pass # Replace with function body.
 
@@ -44,7 +45,7 @@ func _on_CreateFloatingTextButtonGlobal(text, x, y, typeText, timeToShow): #text
 	floaty_text.modulate = Color(rand_range(0.7, 1), rand_range(0.7, 1), rand_range(0.7, 1), 1.0)
 	floaty_text.time_to_show = timeToShow #float siempre
 	floaty_text.text = text #texto a mostrar
-		
+
 	get_parent().add_child(floaty_text)
 
 func sounds(bkgMusic):
@@ -54,3 +55,7 @@ func sounds(bkgMusic):
 	elif !Global.music:
 		bkgMusic.stream_paused = true
 		control = true
+
+func fx(hurtFx):
+	if fx:
+		hurtFx.play()

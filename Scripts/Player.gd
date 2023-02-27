@@ -8,7 +8,7 @@ export var hitWait = 0.5 #tiempo de espera hasta el proximo disparo
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var flashTimer = $FlashTimer
-onready var dust = $dust
+onready var dust = $Dust
 
 const moveSpeed = 70
 const maxSpeed = 220
@@ -93,6 +93,7 @@ func _move():
 	
 func hit(): #funcion que controla el golpe
 	if (hitTime >= hitWait):
+		Global.fx($AttackFx)
 		var hit_instance = Hit.instance()
 		hitTime = 0
 		match hitDirecction: #genero el golpe fuera del player para no colisionar
@@ -135,10 +136,9 @@ func enemyDamage(damage): #daño recibido por parte de los enemigos o armas
 			flickerFlash()
 			Global._on_CreateFloatingTextButtonGlobal("Damage - " + str(damage), position.x, position.y, 2, 1.0)
 			Global.player_life -= damage
-			
+			Global.fx($HeroHurt)
 			print(Global.player_life)
-			#if Global.fx:
-			#	playerHurt.play()
+
 		if Global.player_life <= 0: #vuelvo a preguntar por si en el golpe anterior lo mata
 			Global.gameFinalCondition = 2
 			get_tree().change_scene("res://Scenes/EndGame.tscn")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/enemy1_hurt_female.mp3-9e3825ee646e915bd5f9e7b46665c1a0.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/enemy1_hurt_female.mp3"
+dest_files=[ "res://.import/enemy1_hurt_female.mp3-9e3825ee646e915bd5f9e7b46665c1a0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

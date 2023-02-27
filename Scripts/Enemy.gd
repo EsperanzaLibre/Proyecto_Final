@@ -11,7 +11,6 @@ onready var animationTime = $AnimationTime
 onready var lifeBar = $LifeBar
 onready var flashTimer = $FlashTimer
 onready var enemyName = $EnemyName
-onready var enemyHurt = $EnemyHurt
 
 export var hitTime = 3.0 #tiempo por golpe
 export var hitWait = 1.0 #tiempo de espera hasta el proximo golpe
@@ -234,8 +233,8 @@ func _on_FlashTimer_timeout():
 
 func _on_EnemyBody_area_entered(area):
 	if area.is_in_group("Hit"): #si el body es el golpe muere el enemigo
-		#if Global.fx:
-		#	enemyHurt.play()
+		Global.fx($EnemyHurt)
+		
 		if enemyLife > 0: #si es mas de cero le resto vida
 			enemyLife -= area.hitDamage
 			Global._on_CreateFloatingTextButtonGlobal("Damage -" + str(area.hitDamage), position.x, position.y, 1, 1.0)

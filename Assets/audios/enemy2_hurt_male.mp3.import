@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/enemy2_hurt_male.mp3-cb33951933e6bece1a0c9ae9f14d464a.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/enemy2_hurt_male.mp3"
+dest_files=[ "res://.import/enemy2_hurt_male.mp3-cb33951933e6bece1a0c9ae9f14d464a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
