@@ -26,28 +26,6 @@
 [ext_resource path="res://Scenes/Enemies/EnemyHuntress.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Assets/audios/level1.mp3" type="AudioStream" id=25]
 
-[sub_resource type="DynamicFontData" id=69]
-resource_local_to_scene = true
-font_path = "res://Assets/fonts/beachday.ttf"
-
-[sub_resource type="DynamicFont" id=68]
-resource_local_to_scene = true
-size = 22
-outline_size = 2
-outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 69 )
-
-[sub_resource type="DynamicFontData" id=70]
-antialiased = false
-font_path = "res://Assets/fonts/beachday.ttf"
-
-[sub_resource type="DynamicFont" id=67]
-resource_local_to_scene = true
-size = 22
-outline_size = 2
-outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 70 )
-
 [sub_resource type="ConvexPolygonShape2D" id=53]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
 
@@ -509,12 +487,34 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 0.943874
+shader_param/zoom = 0.66742
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
 shader_param/speed = 0.1
 shader_param/noise = SubResource( 40 )
+
+[sub_resource type="DynamicFontData" id=70]
+resource_local_to_scene = true
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=71]
+resource_local_to_scene = true
+size = 22
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 70 )
+
+[sub_resource type="DynamicFontData" id=69]
+antialiased = false
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=72]
+resource_local_to_scene = true
+size = 22
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 69 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 8 )
@@ -561,49 +561,6 @@ modulate = Color( 0.564706, 0.698039, 0.615686, 1 )
 position = Vector2( 476.458, 378.875 )
 scale = Vector2( 3.04713, 2.40495 )
 texture = ExtResource( 6 )
-
-[node name="Hud" type="Node2D" parent="ParallaxBackground"]
-position = Vector2( 23.0001, 7.00009 )
-scale = Vector2( 0.8, 0.8 )
-
-[node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 17 )]
-position = Vector2( 10, 100 )
-
-[node name="HeroIcon" type="Sprite" parent="ParallaxBackground/Hud"]
-position = Vector2( 33, 40 )
-texture = ExtResource( 2 )
-
-[node name="HeroLifeBar" type="TextureProgress" parent="ParallaxBackground/Hud/HeroIcon"]
-margin_left = 30.0
-margin_top = -3.0
-margin_right = 130.0
-margin_bottom = 4.0
-value = 100.0
-texture_under = ExtResource( 5 )
-texture_progress = ExtResource( 3 )
-
-[node name="Bar" type="Sprite" parent="ParallaxBackground/Hud/HeroIcon"]
-position = Vector2( 79, 0.5 )
-texture = ExtResource( 7 )
-
-[node name="LifeCounter" type="RichTextLabel" parent="ParallaxBackground/Hud"]
-margin_left = 13.0
-margin_top = 161.0
-margin_right = 124.0
-margin_bottom = 186.0
-custom_colors/default_color = Color( 1, 1, 0, 1 )
-custom_fonts/normal_font = SubResource( 68 )
-text = "Life:"
-
-[node name="Score" type="RichTextLabel" parent="ParallaxBackground/Hud"]
-margin_left = 11.0
-margin_top = 131.0
-margin_right = 123.0
-margin_bottom = 171.0
-custom_colors/default_color = Color( 1, 1, 0, 1 )
-custom_fonts/normal_font = SubResource( 67 )
-text = "Score: "
-deselect_on_focus_loss_enabled = false
 
 [node name="Floor" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
@@ -691,6 +648,51 @@ position = Vector2( 3252, 519 )
 stream = ExtResource( 25 )
 volume_db = -10.439
 autoplay = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Node2D" parent="UI"]
+position = Vector2( 23, 7 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="GameTime" parent="UI/Hud" instance=ExtResource( 17 )]
+position = Vector2( 10, 100 )
+
+[node name="HeroIcon" type="Sprite" parent="UI/Hud"]
+position = Vector2( 33, 40 )
+texture = ExtResource( 2 )
+
+[node name="HeroLifeBar" type="TextureProgress" parent="UI/Hud/HeroIcon"]
+margin_left = 30.0
+margin_top = -3.0
+margin_right = 130.0
+margin_bottom = 4.0
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 3 )
+
+[node name="Bar" type="Sprite" parent="UI/Hud/HeroIcon"]
+position = Vector2( 79, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="LifeCounter" type="RichTextLabel" parent="UI/Hud"]
+margin_left = 13.0
+margin_top = 161.0
+margin_right = 124.0
+margin_bottom = 186.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 71 )
+text = "Life:"
+
+[node name="Score" type="RichTextLabel" parent="UI/Hud"]
+margin_left = 11.0
+margin_top = 131.0
+margin_right = 123.0
+margin_bottom = 171.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 72 )
+text = "Score: "
+deselect_on_focus_loss_enabled = false
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]
 [connection signal="item_rect_changed" from="water" to="water" method="_on_water_item_rect_changed"]

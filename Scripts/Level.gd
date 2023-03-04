@@ -1,8 +1,8 @@
 extends Node2D
 
-onready var player_life_bar = $ParallaxBackground/Hud/HeroIcon/HeroLifeBar
-onready var enemy_score = $ParallaxBackground/Hud/Score
-onready var life_counter = $ParallaxBackground/Hud/LifeCounter
+onready var player_life_bar = $UI/Hud/HeroIcon/HeroLifeBar
+onready var enemy_score = $UI/Hud/Score
+onready var life_counter = $UI/Hud/LifeCounter
 onready var area_dead = $Floor/AreaDead
 
 func _ready():

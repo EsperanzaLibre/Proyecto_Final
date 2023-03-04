@@ -16,28 +16,6 @@
 [ext_resource path="res://Scripts/PlatformMov.gd" type="Script" id=14]
 [ext_resource path="res://Assets/audios/level3.mp3" type="AudioStream" id=15]
 
-[sub_resource type="DynamicFontData" id=50]
-resource_local_to_scene = true
-font_path = "res://Assets/fonts/beachday.ttf"
-
-[sub_resource type="DynamicFont" id=44]
-resource_local_to_scene = true
-size = 22
-outline_size = 2
-outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 50 )
-
-[sub_resource type="DynamicFontData" id=51]
-antialiased = false
-font_path = "res://Assets/fonts/beachday.ttf"
-
-[sub_resource type="DynamicFont" id=46]
-resource_local_to_scene = true
-size = 22
-outline_size = 2
-outline_color = Color( 0.215686, 0.215686, 0, 1 )
-font_data = SubResource( 51 )
-
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
@@ -699,6 +677,28 @@ tracks/0/keys = {
 "values": [ 0.0, 515.0, 0.0 ]
 }
 
+[sub_resource type="DynamicFontData" id=75]
+resource_local_to_scene = true
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=76]
+resource_local_to_scene = true
+size = 22
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 75 )
+
+[sub_resource type="DynamicFontData" id=77]
+antialiased = false
+font_path = "res://Assets/fonts/beachday.ttf"
+
+[sub_resource type="DynamicFont" id=78]
+resource_local_to_scene = true
+size = 22
+outline_size = 2
+outline_color = Color( 0.215686, 0.215686, 0, 1 )
+font_data = SubResource( 77 )
+
 [node name="Level3" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -733,49 +733,6 @@ modulate = Color( 0.270588, 0.278431, 0.27451, 1 )
 position = Vector2( 512.5, 284.5 )
 scale = Vector2( 3.22812, 3.50556 )
 texture = ExtResource( 2 )
-
-[node name="Hud" type="Node2D" parent="ParallaxBackground"]
-position = Vector2( 23, 7 )
-scale = Vector2( 0.8, 0.8 )
-
-[node name="GameTime" parent="ParallaxBackground/Hud" instance=ExtResource( 11 )]
-position = Vector2( 10, 100 )
-
-[node name="HeroIcon" type="Sprite" parent="ParallaxBackground/Hud"]
-position = Vector2( 33, 40 )
-texture = ExtResource( 3 )
-
-[node name="HeroLifeBar" type="TextureProgress" parent="ParallaxBackground/Hud/HeroIcon"]
-margin_left = 30.0
-margin_top = -3.0
-margin_right = 130.0
-margin_bottom = 4.0
-value = 100.0
-texture_under = ExtResource( 6 )
-texture_progress = ExtResource( 5 )
-
-[node name="Bar" type="Sprite" parent="ParallaxBackground/Hud/HeroIcon"]
-position = Vector2( 79, 0.5 )
-texture = ExtResource( 10 )
-
-[node name="LifeCounter" type="RichTextLabel" parent="ParallaxBackground/Hud"]
-margin_left = 13.0
-margin_top = 161.0
-margin_right = 124.0
-margin_bottom = 186.0
-custom_colors/default_color = Color( 1, 1, 0, 1 )
-custom_fonts/normal_font = SubResource( 44 )
-text = "Life:"
-
-[node name="Score" type="RichTextLabel" parent="ParallaxBackground/Hud"]
-margin_left = 11.0
-margin_top = 131.0
-margin_right = 123.0
-margin_bottom = 171.0
-custom_colors/default_color = Color( 1, 1, 0, 1 )
-custom_fonts/normal_font = SubResource( 46 )
-text = "Score: "
-deselect_on_focus_loss_enabled = false
 
 [node name="Floor" type="TileMap" parent="."]
 position = Vector2( 7.62939e-06, 3.05176e-05 )
@@ -854,5 +811,50 @@ anims/movement = SubResource( 49 )
 stream = ExtResource( 15 )
 volume_db = -10.439
 autoplay = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Node2D" parent="UI"]
+position = Vector2( 23, 7 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="GameTime" parent="UI/Hud" instance=ExtResource( 11 )]
+position = Vector2( 10, 100 )
+
+[node name="HeroIcon" type="Sprite" parent="UI/Hud"]
+position = Vector2( 33, 40 )
+texture = ExtResource( 3 )
+
+[node name="HeroLifeBar" type="TextureProgress" parent="UI/Hud/HeroIcon"]
+margin_left = 30.0
+margin_top = -3.0
+margin_right = 130.0
+margin_bottom = 4.0
+value = 100.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+
+[node name="Bar" type="Sprite" parent="UI/Hud/HeroIcon"]
+position = Vector2( 79, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="LifeCounter" type="RichTextLabel" parent="UI/Hud"]
+margin_left = 13.0
+margin_top = 161.0
+margin_right = 124.0
+margin_bottom = 186.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 76 )
+text = "Life:"
+
+[node name="Score" type="RichTextLabel" parent="UI/Hud"]
+margin_left = 11.0
+margin_top = 131.0
+margin_right = 123.0
+margin_bottom = 171.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 78 )
+text = "Score: "
+deselect_on_focus_loss_enabled = false
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]
