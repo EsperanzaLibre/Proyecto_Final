@@ -24,7 +24,6 @@ var music = true #controlo la musica ambiental
 var fx = true #controlo los sonidos fx
 var control = true #variable de control para que no ingrese al if en cada proceso
 
-
 func _ready():
 	pass # Replace with function body.
 

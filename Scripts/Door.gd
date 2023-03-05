@@ -2,16 +2,17 @@ extends Area2D
 #Escena que contiene la puerta de acceso a las trivias y de vuelta
 #al escenario de donde venimos
 
+onready var sprite = $Sprite
 export(String, FILE) var next_scene_path = ""
 export(Vector2) var player_spawn_location = Vector2.ZERO
 export(int) var player_direction = 1
+export (int) var doorType
 var floaty_text_scene = preload("res://Scenes/FloatingText.tscn")
-
 var hero_body = null
 
 func _ready():
-	pass
-
+	sprite.frame = doorType #selecciono el frame a mostrar
+	
 func _physics_process(delta):
 	if hero_body != null && Input.is_action_pressed("ui_up"):#si colisiono con el player entro al if
 		#print(Global.trivia_check) #debug

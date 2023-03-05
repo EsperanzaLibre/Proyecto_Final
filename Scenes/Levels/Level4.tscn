@@ -22,7 +22,7 @@
 [ext_resource path="res://Assets/assets-level4/anim_light1.png" type="Texture" id=20]
 [ext_resource path="res://Assets/assets-level4/anim_light2.png" type="Texture" id=21]
 [ext_resource path="res://Scenes/fire.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scenes/torch.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Assets/assets-level4/anim_lights.png" type="Texture" id=24]
 [ext_resource path="res://Assets/audios/level4.mp3" type="AudioStream" id=25]
 

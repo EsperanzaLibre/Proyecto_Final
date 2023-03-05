@@ -487,7 +487,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 0.66742
+shader_param/zoom = 0.707107
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -562,6 +562,12 @@ position = Vector2( 476.458, 378.875 )
 scale = Vector2( 3.04713, 2.40495 )
 texture = ExtResource( 6 )
 
+[node name="Door" parent="." instance=ExtResource( 23 )]
+position = Vector2( 2207, 396 )
+next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
+player_spawn_location = Vector2( 75, 214 )
+doorType = 1
+
 [node name="Floor" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
@@ -613,11 +619,6 @@ player_direction = 2
 
 [node name="Checkpoint" parent="." instance=ExtResource( 22 )]
 position = Vector2( 4383, 502 )
-
-[node name="Door" parent="." instance=ExtResource( 23 )]
-position = Vector2( 2206, 376 )
-next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
-player_spawn_location = Vector2( 75, 214 )
 
 [node name="Enemy" type="Node2D" parent="."]
 

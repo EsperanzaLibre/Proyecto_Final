@@ -4,8 +4,10 @@ onready var player_life_bar = $UI/Hud/HeroIcon/HeroLifeBar
 onready var enemy_score = $UI/Hud/Score
 onready var life_counter = $UI/Hud/LifeCounter
 onready var area_dead = $Floor/AreaDead
+onready var door = $Door
 
 func _ready():
+	door.doorType += 4 #cambio el sprite de la puerta
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
 	if Global.timer_pause == false: #si es falso el nivel inicia
 		Global.player_life = Global.player_max_life
@@ -13,7 +15,8 @@ func _ready():
 		Global.timer_sec = 0
 		Global.timer_mil = 0
 	else:
-		Global.timer_pause = false #si es verdadero el nivel viene de la trivia
+		Global.timer_pause = false #si es verdadero el nivel viene de la trivia		
+		
 		
 func _process(delta):
 	player_life_bar.value = Global.player_life

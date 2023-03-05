@@ -198,6 +198,7 @@ stream = ExtResource( 5 )
 
 [node name="HeroJump" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
+volume_db = -11.361
 
 [node name="HeroRun" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )

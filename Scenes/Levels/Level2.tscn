@@ -466,6 +466,7 @@ font_data = SubResource( 74 )
 script = ExtResource( 1 )
 
 [node name="Darkness" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -481,6 +482,12 @@ modulate = Color( 0.345098, 0.415686, 0.388235, 1 )
 position = Vector2( 1270, 374 )
 scale = Vector2( 2.682, 2.57176 )
 texture = ExtResource( 11 )
+
+[node name="Door" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1952, 1994 )
+next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
+player_spawn_location = Vector2( 108, 300 )
+doorType = 3
 
 [node name="Floor" type="TileMap" parent="."]
 tile_set = SubResource( 40 )
@@ -516,11 +523,6 @@ player_direction = -1
 position = Vector2( 4761, 1286 )
 next_scene_path = "res://Scenes/loadingScene.tscn"
 player_spawn_location = Vector2( 125, 458 )
-
-[node name="Door" parent="." instance=ExtResource( 9 )]
-position = Vector2( 383, 463 )
-next_scene_path = "res://Scenes/Levels/LevelTrivia.tscn"
-player_spawn_location = Vector2( 108, 300 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 80, 460 )
