@@ -993,7 +993,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 2.51984
+shader_param/zoom = 0.31498
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -1068,7 +1068,7 @@ position = Vector2( 476.458, 378.875 )
 scale = Vector2( 3.04713, 2.40495 )
 texture = ExtResource( 6 )
 
-[node name="Backgound" type="TileMap" parent="."]
+[node name="Decoration" type="TileMap" parent="."]
 position = Vector2( -32646, -4305 )
 tile_set = SubResource( 73 )
 cell_size = Vector2( 4, 4 )
