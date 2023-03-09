@@ -235,9 +235,9 @@ margin_right = 215.0
 margin_bottom = 19.5
 custom_colors/font_color = Color( 0.945098, 0.823529, 0.0470588, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Movement Arrows keys
-Shoot  space key
-pause game esc key
+text = "Movement: Arrow Left & Right
+Jump: Space key
+Punch:  A key
 restart game r key"
 
 [node name="FxButton" type="Button" parent="Menu/SoundsOfGame"]

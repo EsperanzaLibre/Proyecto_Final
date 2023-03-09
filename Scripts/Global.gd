@@ -21,7 +21,7 @@ var trivia_check = false #variable que se usa para no permitir el acceso ilimita
 var lifes = 3 #cantidad de vidas que posee el jugador
 var show_text = false #variable control para que muestre texto solo 1 vez 
 var music = true #controlo la musica ambiental 
-var fx = true #controlo los sonidos fx
+var fxGame = true #controlo los sonidos fx
 var control = true #variable de control para que no ingrese al if en cada proceso
 
 func _ready():
@@ -56,5 +56,5 @@ func sounds(bkgMusic):
 		control = true
 
 func fx(hurtFx):
-	if fx:
+	if fxGame:
 		hurtFx.play()
