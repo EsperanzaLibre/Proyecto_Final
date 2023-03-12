@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/light.png" type="Texture" id=2]
@@ -13,10 +13,14 @@
 [ext_resource path="res://Assets/assets level2/background1.png" type="Texture" id=11]
 [ext_resource path="res://Assets/hero_icon.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/health_bar.png" type="Texture" id=13]
-[ext_resource path="res://Assets/assets level2/blue_fire01.png" type="Texture" id=14]
+[ext_resource path="res://Assets/skull.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar_background.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Medieval castle/Medieval_Castle_Asset_Pack/HUD/bar.png" type="Texture" id=16]
 [ext_resource path="res://Scenes/GameTime.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Deco Anim/FlamesBlue.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Fire/torch.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Deco Anim/FlamesRed.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Deco Anim/FlamesGreen.tscn" type="PackedScene" id=21]
 
 [sub_resource type="TileSet" id=82]
 0/name = "props1.png 0"
@@ -453,6 +457,34 @@
 30/shape_one_way_margin = 0.0
 30/shapes = [  ]
 30/z_index = 0
+31/name = "skull.png 31"
+31/texture = ExtResource( 14 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 7, 1, 583, 760 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "torch.png 32"
+32/texture = ExtResource( 19 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( -1, -2, 31, 31 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=75]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1270,11 +1302,9 @@ font_data = SubResource( 74 )
 script = ExtResource( 1 )
 
 [node name="Darkness" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 0.823529 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 scroll_base_scale = Vector2( 0.5, 0 )
 scroll_ignore_camera_zoom = true
 
@@ -1293,19 +1323,44 @@ tile_set = SubResource( 82 )
 cell_size = Vector2( 4, 4 )
 cell_quadrant_size = 4
 format = 1
-tile_data = PoolIntArray( 3473819, 9, 0, 4064314, 11, 0, 4129820, 11, 0, 4588629, 10, 0, 5308892, 8, 0, 5636595, 9, 0, 5701921, 28, 0, 5768197, 26, 0, 6160580, 3, 0, 6225984, 6, 0, 6357035, 29, 0, 6553640, 7, 0, 6553689, 0, 0, 6619136, 0, 0, 6750572, 18, 0, 6881298, 4, 0, 7077970, 2, 0, 7077992, 2, 0, 7208957, 30, 0, 7143522, 20, 0, 7209946, 10, 0, 7536809, 1, 0, 7537077, 4, 0, 7537721, 29, 0, 7602270, 29, 0, 7602607, 29, 0, 7603219, 29, 0, 7668751, 20, 0, 7995576, 30, 0, 8716764, 29, 0, 8848291, 11, 0, 10027537, 2, 0, 10289677, 2, 0, 12386775, 4, 0, 12977028, 8, 0, 13501384, 29, 0, 13501522, 10, 0, 14025790, 13, 0, 14353336, 6, 0, 14550118, 17, 0, 14811661, 5, 0, 14812373, 9, 0, 15598468, 10, 0, 16516201, 12, 0, 16647325, 9, 0, 16909216, 6, 0, 17237120, 15, 0, 17302744, 30, 0, 17826955, 27, 0, 17892264, 29, 0, 19399449, 27, 0, 19661314, 7, 0, 19661844, 11, 0, 20579469, 22, 0, 20579495, 21, 0, 20776038, 24, 0, 20776057, 23, 0, 20776084, 24, 0, 20907178, 18, 0, 21169240, 29, 0, 21169321, 30, 0, 21627537, 9, 0, 21627780, 29, 0, 21628031, 29, 0, 21628139, 30, 0, 22676362, 27, 0, 22872977, 28, 0, 23200990, 16, 0, 23332050, 15, 0, 23593564, 8, 0, 23658968, 8, 0, 23659722, 15, 0, 23725248, 15, 0, 24183992, 28, 0, 24380586, 26, 0, 24380658, 16, 0, 24446200, 16, 0, 24904920, 26, 0, 24970225, 19, 0, 25231874, 6, 0, 25232360, 29, 0, 25494259, 10, 0, 25494705, 29, 0, 25887735, 29, 0, 26281081, 28, 0, 26543296, 26, 0, 26543356, 19, 0, 26739764, 29, 0, 26805442, 29, 0, 27002107, 29, 0, 27198703, 29, 0, 27264213, 25, 0, 27329261, 30, 0, 28509069, 12, 0, 28837024, 28, 0, 28967538, 25, 0, 29098849, 11, 0, 29163966, 25, 0, 29164532, 10, 0, 29361229, 27, 0, 29819699, 25, 0, 29820059, 15, 0, 30016473, 12, 0, 30147610, 2, 0, 30212563, 26, 0, 31064527, 29, 0, 31195610, 2, 0, 31261865, 29, 0, 31654341, 29, 0, 31654360, 2, 0, 31654743, 30, 0, 31719898, 2, 0, 31850954, 29, 0, 31917131, 15, 0, 32048222, 15, 0, 32178623, 30, 0, 32244183, 2, 0, 32309715, 2, 0, 32572001, 30, 0, 32769129, 20, 0, 32900020, 0, 0, 33227859, 29, 0, 33817526, 29, 0 )
+tile_data = PoolIntArray( 3473819, 9, 0, 4064314, 11, 0, 4129820, 11, 0, 4588629, 10, 0, 5308892, 8, 0, 5636595, 9, 0, 5701921, 28, 0, 5768197, 26, 0, 6160580, 3, 0, 6225984, 6, 0, 6357035, 29, 0, 6553640, 7, 0, 6553689, 0, 0, 6619136, 0, 0, 6750572, 18, 0, 6881298, 4, 0, 7077970, 2, 0, 7077992, 2, 0, 7208957, 30, 0, 7143522, 20, 0, 7209946, 10, 0, 7536809, 1, 0, 7537077, 4, 0, 7537721, 29, 0, 7602270, 29, 0, 7602607, 29, 0, 7603219, 29, 0, 7668751, 20, 0, 7995576, 30, 0, 8716764, 29, 0, 8848291, 11, 0, 10027537, 2, 0, 10289677, 2, 0, 12386775, 4, 0, 12977028, 8, 0, 13501384, 29, 0, 13501522, 10, 0, 14025790, 13, 0, 14353336, 6, 0, 14550118, 17, 0, 14811661, 5, 0, 14812373, 9, 0, 15598468, 10, 0, 16516201, 12, 0, 16647325, 9, 0, 16909216, 6, 0, 17237120, 15, 0, 17302744, 30, 0, 17826955, 27, 0, 17892264, 29, 0, 19399449, 27, 0, 19661314, 7, 0, 19661844, 11, 0, 20579469, 22, 0, 20579495, 21, 0, 20776038, 24, 0, 20776057, 23, 0, 20776084, 24, 0, 20907118, 32, 0, 20907166, 32, 0, 20907178, 18, 0, 20907220, 32, 0, 21169240, 29, 0, 21169321, 30, 0, 21627537, 9, 0, 21627780, 29, 0, 21628031, 29, 0, 21628139, 30, 0, 22283306, 31, 0, 22676362, 27, 0, 22872977, 28, 0, 23200990, 16, 0, 23332050, 15, 0, 23593564, 8, 0, 23658968, 8, 0, 23659722, 15, 0, 23725248, 15, 0, 24183992, 28, 0, 24380586, 26, 0, 24380658, 16, 0, 24446200, 16, 0, 24904920, 26, 0, 24970225, 19, 0, 25231874, 6, 0, 25232360, 29, 0, 25494259, 10, 0, 25494705, 29, 0, 25887735, 29, 0, 26281081, 28, 0, 26543296, 26, 0, 26543356, 19, 0, 26739764, 29, 0, 26805442, 29, 0, 27002107, 29, 0, 27198703, 29, 0, 27264213, 25, 0, 27329261, 30, 0, 28509069, 12, 0, 28837024, 28, 0, 28967538, 25, 0, 29098849, 11, 0, 29163966, 25, 0, 29164532, 10, 0, 29361229, 27, 0, 29819699, 25, 0, 29820059, 15, 0, 30016473, 12, 0, 30147610, 2, 0, 30212563, 26, 0, 31064527, 29, 0, 31195610, 2, 0, 31261865, 29, 0, 31654341, 29, 0, 31654360, 2, 0, 31654743, 30, 0, 31719898, 2, 0, 31850954, 29, 0, 31917131, 15, 0, 32048222, 15, 0, 32178623, 30, 0, 32244183, 2, 0, 32309715, 2, 0, 32572001, 30, 0, 32769129, 20, 0, 32900020, 0, 0, 33227859, 29, 0, 33817526, 29, 0 )
 
 [node name="Flames" type="Node2D" parent="Decoration"]
 
-[node name="Sprite" type="Sprite" parent="Decoration/Flames"]
-position = Vector2( 0, 6 )
-scale = Vector2( 1, 4 )
-texture = ExtResource( 14 )
-vframes = 8
-frame = 7
+[node name="Flames" parent="Decoration/Flames" instance=ExtResource( 18 )]
+position = Vector2( 4323, 1502 )
+
+[node name="Flames2" parent="Decoration/Flames" instance=ExtResource( 18 )]
+position = Vector2( 4389, 1502 )
+
+[node name="Flames3" parent="Decoration/Flames" instance=ExtResource( 20 )]
+position = Vector2( 4551, 1276 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Flames4" parent="Decoration/Flames" instance=ExtResource( 20 )]
+position = Vector2( 4959, 1276 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Flames5" parent="Decoration/Flames" instance=ExtResource( 20 )]
+position = Vector2( 4743, 1280 )
+scale = Vector2( 0.49, 0.49 )
+
+[node name="Flames8" parent="Decoration/Flames" instance=ExtResource( 21 )]
+position = Vector2( 1859, 1949 )
+scale = Vector2( 0.49, 0.49 )
+
+[node name="Flames7" parent="Decoration/Flames" instance=ExtResource( 21 )]
+position = Vector2( 1726, 255 )
+scale = Vector2( 0.49, 0.49 )
+
+[node name="Flames6" parent="Decoration/Flames" instance=ExtResource( 21 )]
+position = Vector2( 918, 506 )
+scale = Vector2( 0.49, 0.49 )
+
+[node name="Flames9" parent="Decoration/Flames" instance=ExtResource( 21 )]
+position = Vector2( 5174, 1648 )
 
 [node name="Floor" type="TileMap" parent="."]
-visible = false
 tile_set = SubResource( 40 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 1
