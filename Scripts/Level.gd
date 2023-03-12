@@ -7,7 +7,7 @@ onready var area_dead = $Floor/AreaDead
 onready var door = $Door
 
 func _ready():
-	door.doorType += 4 #cambio el sprite de la puerta
+	#door.doorType += 4 #cambio el sprite de la puerta
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
 	if Global.timer_pause == false: #si es falso el nivel inicia
 		Global.player_life = Global.player_max_life
