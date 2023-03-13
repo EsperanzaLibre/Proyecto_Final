@@ -121,7 +121,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 13, 20 )
+extents = Vector2( 13, 20.5 )
 
 [sub_resource type="DynamicFontData" id=19]
 resource_local_to_scene = true
@@ -176,7 +176,7 @@ cast_to = Vector2( 20, 0 )
 [node name="EnemyBody" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyBody"]
-position = Vector2( -1, -2 )
+position = Vector2( -1, -1.5 )
 shape = SubResource( 17 )
 
 [node name="AnimationTime" type="Timer" parent="."]

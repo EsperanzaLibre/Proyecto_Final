@@ -9,7 +9,7 @@
 [ext_resource path="res://Shaders/flash.tres" type="Shader" id=7]
 
 [sub_resource type="CircleShape2D" id=11]
-radius = 119.017
+radius = 69.2604
 
 [sub_resource type="ShaderMaterial" id=16]
 shader = ExtResource( 7 )
@@ -19,7 +19,7 @@ shader_param/speedTime = 6.0
 shader_param/changeSprite = false
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 17, 22.5 )
+extents = Vector2( 17, 23.5 )
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -152,7 +152,7 @@ enabled = true
 cast_to = Vector2( 0, 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1.5 )
+position = Vector2( 0, -0.5 )
 shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

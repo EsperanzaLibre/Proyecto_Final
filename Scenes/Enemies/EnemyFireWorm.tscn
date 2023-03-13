@@ -19,7 +19,7 @@ shader_param/speedTime = 6.0
 shader_param/changeSprite = false
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 17.5, 22 )
+extents = Vector2( 17.5, 23.5 )
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -138,7 +138,7 @@ enabled = true
 cast_to = Vector2( 0, 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -2 )
+position = Vector2( -0.5, -0.5 )
 shape = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
