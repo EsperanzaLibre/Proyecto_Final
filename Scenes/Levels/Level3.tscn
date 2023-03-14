@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets level2/props2.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Assets/assets-level3/Grave01.png" type="Texture" id=18]
 [ext_resource path="res://Assets/assets-level3/Grave02.png" type="Texture" id=19]
 [ext_resource path="res://Assets/assets-level3/Ladder.png" type="Texture" id=20]
+[ext_resource path="res://Assets/assets-level3/plx-2.png" type="Texture" id=21]
 
 [sub_resource type="TileSet" id=79]
 0/name = "Grave01.png 0"
@@ -891,8 +892,19 @@ motion_mirroring = Vector2( 1000, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 modulate = Color( 0.270588, 0.278431, 0.27451, 1 )
-position = Vector2( 512.5, 284.5 )
-scale = Vector2( 3.22812, 3.50556 )
+position = Vector2( 500.714, 300.275 )
+scale = Vector2( 2.60566, 2.78033 )
+texture = ExtResource( 13 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1000, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 0.270588, 0.278431, 0.27451, 1 )
+position = Vector2( 500.714, 300.275 )
+scale = Vector2( 2.60566, 2.78033 )
+texture = ExtResource( 21 )
 
 [node name="Decoration" type="TileMap" parent="."]
 tile_set = SubResource( 79 )
