@@ -141,22 +141,22 @@ func selectEnemyType(enemyType):
 		2: #EnemyFireWorm.tscn
 			$EnemyName.text = "Fire Worm"
 			hitType = 2
-			enemyDamage = 30
-			enemyLife = 150
-			enemyScore = 20
+			enemyDamage = 70
+			enemyLife = 170
+			enemyScore = 40
 		3: #EnemyFlyingEye.tscn
 			$EnemyName.text = "Flying Eye"
 			hitType = 1
 			hitAnim = 3
-			enemyDamage = 40
-			enemyLife = 200
-			enemyScore = 30
+			enemyDamage = 80
+			enemyLife = 220
+			enemyScore = 60
 		4: #EnemyGoblin.tscn
 			$EnemyName.text = "Goblin Bandit"
 			hitType = 2
-			enemyDamage = 50
+			enemyDamage = 90
 			enemyLife = 300
-			enemyScore = 40
+			enemyScore = 70
 		5: #EnemyHero.tscn
 			$EnemyName.text = "Dark Hero"
 			hitType = 3
@@ -165,32 +165,32 @@ func selectEnemyType(enemyType):
 			enemyScore = 50
 		6: #EnemyHuntress.tscn
 			$EnemyName.text = "Huntress"
-			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
+			hitType = 4 #el ataque del jefe es aleatorio entre todos los tipos
 			hitAnim = 1
 			enemyDamage = 70
 			enemyLife = 600
 			enemyScore = 60
 		7: #EnemyKing.tscn
 			$EnemyName.text = "King Lean"
-			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 70
+			hitType = 9 #el ataque del jefe es aleatorio entre todos los tipos
+			enemyDamage = 150
 			enemyLife = 600
-			enemyScore = 70
+			enemyScore = 200
 		8: #EnemyMage.tscn
 			$EnemyName.text = "Infernalist"
-			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 70
+			hitType = 7 #el ataque del jefe es aleatorio entre todos los tipos
+			enemyDamage = 90
 			enemyLife = 600
 			enemyScore = 80
 		9: #EnemyMageBoss.tscn
 			$EnemyName.text = "Necromancer Mage"
-			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 70
+			hitType = 8 #el ataque del jefe es aleatorio entre todos los tipos
+			enemyDamage = 120
 			enemyLife = 600
-			enemyScore = 90
+			enemyScore = 150
 		10: #EnemyMushroom.tscn
 			$EnemyName.text = "Psico Mushroom"
-			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
+			hitType = 3 #el ataque del jefe es aleatorio entre todos los tipos
 			hitAnim = 4
 			enemyDamage = 70
 			enemyLife = 600
@@ -242,6 +242,7 @@ func _on_EnemyBody_area_entered(area):
 			lifeBar.value = enemyLife
 		
 		if enemyLife <= 0: #vuelvo a preguntar por si en el golpe anterior lo mata
+			_on_FlashTimer_timeout()
 			queue_free()
 			area.queue_free()
 			Global.enemyScoreCounter += enemyScore #sumo el puntaje

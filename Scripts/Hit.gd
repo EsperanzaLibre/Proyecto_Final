@@ -17,7 +17,6 @@ var hitDamageCritic = false #variable que indica si es un golpe critico
 var hitPowerUp = false #variable que indica si esta el power up del player activo
 
 func _ready():
-	#hitDamage = 10
 	match hitAnim: 
 	#selecciono que animacion muestro. 0 si no tiene animacion
 	#tambien acomodo el tiempo de destruccion del hit
@@ -68,20 +67,17 @@ func _on_hit_body_entered(body):
 		queue_free()
 
 func hitPower(hitType):
-	#animatedSprite.material.set_shader_param("changeSprite",hitType)
-	#animatedSprite.material.set_shader_param("fullSprite",true)
-	
 	match hitType: #selecciono el tipo de daño segun el personaje en un rango determinado
-		0: hitDamage = rng.randi_range(0,10)
-		1: hitDamage = rng.randi_range(0,25)
-		2: hitDamage = rng.randi_range(0,40) 
-		3: hitDamage = rng.randi_range(0,55)
-		4: hitDamage = rng.randi_range(0,70) 
-		5: hitDamage = rng.randi_range(0,85) 
-		6: hitDamage = rng.randi_range(0,100) 
-		7: hitDamage = rng.randi_range(0,115) 
-		8: hitDamage = rng.randi_range(0,130) 
-		9: hitDamage = rng.randi_range(0,145)
+		0: hitDamage = rng.randi_range(0,20)
+		1: hitDamage = rng.randi_range(0,35)
+		2: hitDamage = rng.randi_range(0,50) 
+		3: hitDamage = rng.randi_range(0,65)
+		4: hitDamage = rng.randi_range(0,80) 
+		5: hitDamage = rng.randi_range(0,95) 
+		6: hitDamage = rng.randi_range(0,110) 
+		7: hitDamage = rng.randi_range(0,125) 
+		8: hitDamage = rng.randi_range(0,150) 
+		9: hitDamage = rng.randi_range(0,155)
 		 
 	if hitDamageCritic: #consulto si el golpe que viene es con critico
 		hitDamage *= 2 #subo el golpe un 100%
@@ -90,6 +86,4 @@ func hitPower(hitType):
 	if hitPowerUp: #consulto si el golpe que viene es con power up
 		hitDamage *= 1.5 #subo el golpe un 50%
 		hitPowerUp = false #desactivo el power up
-	
-	#powerUp.start() #inicio el power up si tiene
 
