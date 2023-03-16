@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets level2/props2.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Assets/assets-level3/plx-2.png" type="Texture" id=21]
 [ext_resource path="res://Scenes/Deco Anim/FlamesRed.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Deco Anim/FlamesBlue.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Deco Anim/FlamesGreen.tscn" type="PackedScene" id=24]
 
 [sub_resource type="TileSet" id=79]
 0/name = "Grave01.png 0"
@@ -867,6 +868,7 @@ font_data = SubResource( 77 )
 script = ExtResource( 4 )
 
 [node name="Darkness" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
@@ -912,6 +914,12 @@ texture = ExtResource( 21 )
 
 [node name="Flames2" parent="Flames" instance=ExtResource( 23 )]
 position = Vector2( 5200, 434 )
+
+[node name="Flames" parent="Flames" instance=ExtResource( 22 )]
+position = Vector2( 4283, 466 )
+
+[node name="Flames3" parent="Flames" instance=ExtResource( 24 )]
+position = Vector2( 1311, 465 )
 
 [node name="Decoration" type="TileMap" parent="."]
 tile_set = SubResource( 79 )
@@ -966,9 +974,6 @@ modulate = Color( 0.129412, 0.121569, 0.121569, 0.529412 )
 position = Vector2( 5416.5, 296 )
 scale = Vector2( 28.3568, 3.01852 )
 texture = ExtResource( 13 )
-
-[node name="Flames" parent="Niebla" instance=ExtResource( 22 )]
-position = Vector2( -40.0786, 52.9754 )
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 5959, 197 )
