@@ -1305,7 +1305,6 @@ font_data = SubResource( 74 )
 script = ExtResource( 1 )
 
 [node name="Darkness" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 0.823529 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -1350,11 +1349,13 @@ position = Vector2( 4743, 1280 )
 scale = Vector2( 0.49, 0.49 )
 
 [node name="Flames8" parent="Decoration/Flames" instance=ExtResource( 21 )]
-position = Vector2( 1859, 1949 )
+position = Vector2( 1859, 1960 )
+rotation = -3.12139
 scale = Vector2( 0.49, 0.49 )
 
 [node name="Flames7" parent="Decoration/Flames" instance=ExtResource( 21 )]
-position = Vector2( 1726, 255 )
+position = Vector2( 1725, 264 )
+rotation = -3.13118
 scale = Vector2( 0.49, 0.49 )
 
 [node name="Flames6" parent="Decoration/Flames" instance=ExtResource( 21 )]
@@ -1365,7 +1366,8 @@ scale = Vector2( 0.49, 0.49 )
 position = Vector2( 5174, 1648 )
 
 [node name="Flames10" parent="Decoration/Flames" instance=ExtResource( 21 )]
-position = Vector2( 3652, 859 )
+position = Vector2( 3654, 880 )
+rotation = -3.08664
 
 [node name="Flames11" parent="Decoration/Flames" instance=ExtResource( 21 )]
 position = Vector2( 4537, 916 )
