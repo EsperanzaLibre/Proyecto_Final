@@ -10,7 +10,6 @@ func _ready():
 
 func _on_PowerUp_body_entered(body):
 	if body.is_in_group("Player"): #si el body es el player se destruye
-		Global.player_life = 200
-		#crear variable global para la vida del player
+		Global.player_life = Global.player_max_life
 		Global._on_CreateFloatingTextButtonGlobal("LIFE!!!", position.x, position.y, 3, 1.0)
 		queue_free()

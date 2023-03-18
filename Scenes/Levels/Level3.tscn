@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets level2/props2.png" type="Texture" id=2]
@@ -25,6 +25,10 @@
 [ext_resource path="res://Scenes/Deco Anim/FlamesBlue.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/Deco Anim/FlamesGreen.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scenes/Enemies/EnemySamurai.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Assets/assets-level3/Tree.png" type="Texture" id=26]
+[ext_resource path="res://Assets/assets-level3/DarkForest1.2/env_rock.png" type="Texture" id=27]
+[ext_resource path="res://Assets/assets-level3/spooky_trees.png" type="Texture" id=28]
+[ext_resource path="res://Assets/assets-level3/DarkForest1.2/env_trees.png" type="Texture" id=29]
 
 [sub_resource type="TileSet" id=79]
 0/name = "Grave01.png 0"
@@ -181,6 +185,260 @@
 10/shape_one_way_margin = 0.0
 10/shapes = [  ]
 10/z_index = 0
+
+[sub_resource type="TileSet" id=80]
+0/name = "Church.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -2, -7, 73, 178 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Grave01.png 1"
+1/texture = ExtResource( 18 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( -2, -6, 77, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Grave02.png 2"
+2/texture = ExtResource( 19 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( -1, -3, 31, 41 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Grave03.png 3"
+3/texture = ExtResource( 16 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( -2, -3, 53, 83 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Ladder.png 4"
+4/texture = ExtResource( 20 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( -1, -3, 25, 129 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tree.png 5"
+5/texture = ExtResource( 26 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( -3, -2, 136, 122 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "spooky_trees.png 6"
+6/texture = ExtResource( 28 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 1, 34, 68, 110 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "spooky_trees.png 7"
+7/texture = ExtResource( 28 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 71, 34, 61, 112 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "spooky_trees.png 8"
+8/texture = ExtResource( 28 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 132, 32, 50, 113 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "spooky_trees.png 9"
+9/texture = ExtResource( 28 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 184, -4, 55, 148 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "env_trees.png 10"
+10/texture = ExtResource( 29 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 153, -2, 92, 128 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "env_trees.png 11"
+11/texture = ExtResource( 29 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( -7, -1, 136, 119 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+13/name = "env_trees.png 13"
+13/texture = ExtResource( 29 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( -4, 143, 77, 86 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "env_trees.png 14"
+14/texture = ExtResource( 29 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 193, 156, 67, 75 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "env_rock.png 15"
+15/texture = ExtResource( 27 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( -3, 169, 118, 72 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "env_rock.png 16"
+16/texture = ExtResource( 27 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 98, 67, 69 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "env_rock.png 17"
+17/texture = ExtResource( 27 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 70, 107, 66, 52 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "env_rock.png 18"
+18/texture = ExtResource( 27 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 136, 101, 31, 57 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -884,9 +1142,6 @@ position = Vector2( 9605, 285 )
 next_scene_path = "res://Scenes/loadingScene.tscn"
 player_spawn_location = Vector2( 114, 313 )
 
-[node name="Checkpoint" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1987, 400 )
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0 )
 scroll_ignore_camera_zoom = true
@@ -926,6 +1181,16 @@ position = Vector2( 1311, 465 )
 tile_set = SubResource( 79 )
 format = 1
 tile_data = PoolIntArray( 140, 1610612744, 0, 65678, 1610612743, 0, 65679, 1610612744, 0, 131216, 1073741833, 0, 131217, 1610612744, 0, 131219, 1610612744, 0, 131221, -1073741816, 0, 196645, 536870913, 0, 262182, 536870919, 0, 262183, 1073741829, 0, 262184, 1073741829, 0, 262185, 1073741829, 0, 262186, 536870922, 0, 262187, 9, 0, 262188, 9, 0, 262190, 9, 0, 262191, 9, 0, 262192, 10, 0, 262289, 536870920, 0, 327687, 7, 0, 327688, 7, 0, 327691, 7, 0, 327700, 1, 0, 327705, 2, 0, 327720, 4, 0, 327733, 536870913, 0, 327735, 8, 0, 327737, 8, 0, 327740, 8, 0, 327745, 8, 0, 327746, 8, 0, 327747, 536870913, 0, 327760, 8, 0, 327771, 7, 0, 327772, 7, 0, 327775, 1610612741, 0, 327776, 1610612741, 0, 327777, 1610612742, 0, 327798, 536870920, 0, 327827, 3, 0, 393223, 0, 0, 393224, 0, 0, 393225, 9, 0, 393227, 0, 0, 393229, 9, 0, 393230, 9, 0, 393231, 3, 0, 393232, 9, 0, 393233, 10, 0, 393234, 3, 0, 393282, 536870914, 0, 393295, 9, 0, 393296, 9, 0, 393297, 3, 0, 393307, 10, 0, 393308, 10, 0, 393328, 536870920, 0, 393338, 536870920, 0, 393350, 1610612741, 0, 393351, 1610612741, 0, 393352, 3, 0, 393360, 536870921, 0, 393362, 1610612741, 0, 458752, 9, 0, 458759, 4, 0, 458772, 0, 0, 458793, 9, 0, 458804, 1073741829, 0, 458805, 1073741829, 0, 458806, 536870921, 0, 458807, 536870921, 0, 458808, 536870921, 0, 458809, 536870921, 0, 458810, 10, 0, 458813, 10, 0, 458817, 4, 0, 458825, 9, 0, 458826, 10, 0, 458870, 0, 0, 458882, 1610612742, 0, 458883, 1610612741, 0, 458884, 3, 0, 458893, 1610612741, 0, 458894, 536870921, 0, 524398, 536870922, 0, 524399, 536870921, 0, 524400, 536870912, 0, 524401, 536870912, 0, 524402, 536870912, 0 )
+
+[node name="Decoration2" type="TileMap" parent="."]
+tile_set = SubResource( 80 )
+cell_size = Vector2( 4, 4 )
+cell_quadrant_size = 4
+format = 1
+tile_data = PoolIntArray( 3211994, 10, 0, 3277422, 11, 0, 4523534, 6, 0, 4915488, 9, 0, 5046736, 8, 0, 5439721, 5, 0, 5441020, 18, 0, 5570968, 13, 0, 6031416, 9, 0, 6094985, 17, 0, 6095350, 17, 0, 6096301, 14, 0, 6160725, 6, 0, 6161345, 6, 0, 6162549, 14, 0, 6226054, 2, 0, 6226113, 2, 0, 6555074, 17, 0, 6620318, 6, 0, 6686599, 13, 0, 6815801, 15, 0, 7078803, 17, 0, 7079873, 11, 0, 7144621, 13, 0, 7473013, 16, 0, 7604456, 17, 0, 7735070, 14, 0, 7866271, 16, 0, 8127077, 15, 0, 8718262, 18, 0 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4077, 466 )
 
 [node name="Floor" type="TileMap" parent="."]
 position = Vector2( 7.62939e-06, 3.05176e-05 )
@@ -971,6 +1236,7 @@ color = Color( 0.85098, 0.72549, 0.6, 1 )
 range_height = 1.0
 
 [node name="Niebla" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0.129412, 0.121569, 0.121569, 0.529412 )
 position = Vector2( 5416.5, 296 )
 scale = Vector2( 28.3568, 3.01852 )
