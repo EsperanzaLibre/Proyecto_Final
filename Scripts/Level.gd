@@ -11,6 +11,7 @@ func _ready():
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
 	if Global.timer_pause == false: #si es falso el nivel inicia
 		Global.player_life = Global.player_max_life
+		Global.bossDefeat = false #el level inicia con el jefe vivo
 		Global.timer_min = 5 #si el level inicia se coloca el tiempo inicial
 		Global.timer_sec = 0
 		Global.timer_mil = 0

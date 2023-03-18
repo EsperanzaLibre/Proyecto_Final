@@ -24,8 +24,8 @@ margin_left = -46.0
 margin_top = -19.5
 margin_right = 46.0
 margin_bottom = 19.5
-custom_colors/font_color = Color( 0.827451, 0.596078, 0.266667, 1 )
-custom_colors/font_outline_modulate = Color( 0.231373, 0.968627, 0.0235294, 1 )
+custom_colors/font_color = Color( 0.0352941, 0.92549, 0.713726, 1 )
+custom_colors/font_outline_modulate = Color( 0.0784314, 0.0392157, 0.364706, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "15
 "

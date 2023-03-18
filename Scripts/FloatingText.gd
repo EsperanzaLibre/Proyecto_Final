@@ -47,6 +47,9 @@ func _ready():
 		5: 
 			$Label.add_color_override("font_color", "09dad1")
 			$Label.add_color_override("font_outline_modulate", "090bda")
+		6: 
+			$Label.add_color_override("font_color", "09ecb6")
+			$Label.add_color_override("font_outline_modulate", "140a5d")
 		
 	tween.interpolate_callback(self, 1.0, "destroy")
 	tween.start()

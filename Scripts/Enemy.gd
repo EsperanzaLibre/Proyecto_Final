@@ -35,7 +35,7 @@ var enemyDamage #tipo de daño que causa al player
 var enemyLife = 100 #vida del enemigo
 var enemyScore = 0 #puntaje del enemigo
 var enemyDamageCritic = 1 #golpe critico
-
+var enemyBoss = false #identifico al enemigo como un jefe
 
 func _ready():
 	rng.randomize()
@@ -173,21 +173,24 @@ func selectEnemyType(enemyType):
 		7: #EnemyKing.tscn
 			$EnemyName.text = "King Lean"
 			hitType = 9 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 150
-			enemyLife = 600
-			enemyScore = 200
+			enemyDamage = 250
+			enemyLife = 1000
+			enemyScore = 300
+			enemyBoss = true
 		8: #EnemyMage.tscn
 			$EnemyName.text = "Infernalist"
 			hitType = 7 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 90
-			enemyLife = 600
-			enemyScore = 80
+			enemyDamage = 125
+			enemyLife = 700
+			enemyScore = 150
+			enemyBoss = true
 		9: #EnemyMageBoss.tscn
 			$EnemyName.text = "Necromancer Mage"
 			hitType = 8 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 120
-			enemyLife = 600
-			enemyScore = 150
+			enemyDamage = 175
+			enemyLife = 800
+			enemyScore = 200
+			enemyBoss = true
 		10: #EnemyMushroom.tscn
 			$EnemyName.text = "Psico Mushroom"
 			hitType = 3 #el ataque del jefe es aleatorio entre todos los tipos
@@ -198,9 +201,10 @@ func selectEnemyType(enemyType):
 		11: #EnemySamurai.tscn
 			$EnemyName.text = "Samurai"
 			hitType = 5 #el ataque del jefe es aleatorio entre todos los tipos
-			enemyDamage = 60
-			enemyLife = 400
-			enemyScore = 100
+			enemyDamage = 225
+			enemyLife = 900
+			enemyScore = 250
+			enemyBoss = true
 		12: #EnemyShogun.tscn
 			$EnemyName.text = "Shogun"
 			hitType = 5 #el ataque del jefe es aleatorio entre todos los tipos
@@ -246,6 +250,9 @@ func _on_EnemyBody_area_entered(area):
 			queue_free()
 			area.queue_free()
 			Global.enemyScoreCounter += enemyScore #sumo el puntaje
+			if enemyBoss: #activo el control si el enemigo era un jefe
+				print("jefe muere")
+				Global.bossDefeat = true
 		#	if enemyType == 6:
 		#		Global.gameFinalCondition = 1
 		#		get_tree().change_scene("res://scenes/EndGame.tscn")

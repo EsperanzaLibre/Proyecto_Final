@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets level2/props2.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scenes/Deco Anim/FlamesRed.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Deco Anim/FlamesBlue.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/Deco Anim/FlamesGreen.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Enemies/EnemySamurai.tscn" type="PackedScene" id=25]
 
 [sub_resource type="TileSet" id=79]
 0/name = "Grave01.png 0"
@@ -1048,5 +1049,10 @@ custom_colors/default_color = Color( 1, 1, 0, 1 )
 custom_fonts/normal_font = SubResource( 78 )
 text = "Score: "
 deselect_on_focus_loss_enabled = false
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="EnemySamurai" parent="Enemies" instance=ExtResource( 25 )]
+position = Vector2( 9523, 292 )
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]

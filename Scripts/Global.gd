@@ -10,7 +10,7 @@ var player_facing_direction = 1 #orientacion del player
 var gameFinalCondition = 1 #1 gana 2 pierde
 var triviaCorrectAnswers = 0 #controlo que haya respondido bien la trivia para ganar el powerup
 var player_life # vida actual del player
-const player_max_life = 200 #vida maxima del player
+const player_max_life = 500 #vida maxima del player
 var enemyScoreCounter = 0 #cuento cuantos puntos obtiene el player
 var timer = true #variable que me indica si el tiempo de juego sigue activo
 var timer_pause = false #variable para pausar el tiempo del juego
@@ -23,6 +23,7 @@ var show_text = false #variable control para que muestre texto solo 1 vez
 var music = true #controlo la musica ambiental 
 var fxGame = true #controlo los sonidos fx
 var control = true #variable de control para que no ingrese al if en cada proceso
+var bossDefeat = false #controlo si mato al jefe del level
 
 func _ready():
 	pass # Replace with function body.
