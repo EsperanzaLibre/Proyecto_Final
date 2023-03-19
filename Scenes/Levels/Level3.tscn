@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://Assets/assets-level3/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/assets level2/props2.png" type="Texture" id=2]
@@ -36,6 +36,9 @@
 [ext_resource path="res://Scenes/Deco Anim/FairieRed.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scenes/Deco Anim/FairieViolet.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Scenes/PowerUp.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Scenes/Enemies/EnemySkeleton.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Scenes/Enemies/EnemyHuntress.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Scenes/Enemies/EnemyHero.tscn" type="PackedScene" id=39]
 
 [sub_resource type="TileSet" id=79]
 0/name = "Grave01.png 0"
@@ -1150,11 +1153,6 @@ script = ExtResource( 4 )
 [node name="Darkness" type="CanvasModulate" parent="."]
 color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
-[node name="Portal2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 9605, 285 )
-next_scene_path = "res://Scenes/loadingScene.tscn"
-player_spawn_location = Vector2( 114, 313 )
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0 )
 scroll_ignore_camera_zoom = true
@@ -1297,12 +1295,6 @@ texture = ExtResource( 12 )
 color = Color( 0.85098, 0.72549, 0.6, 1 )
 range_height = 1.0
 
-[node name="Niebla" type="Sprite" parent="."]
-modulate = Color( 0.129412, 0.121569, 0.121569, 0.529412 )
-position = Vector2( 5416.5, 296 )
-scale = Vector2( 28.3568, 3.01852 )
-texture = ExtResource( 13 )
-
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 5959, 197 )
 curve = SubResource( 47 )
@@ -1380,6 +1372,14 @@ deselect_on_focus_loss_enabled = false
 [node name="PowerUp" parent="." instance=ExtResource( 36 )]
 position = Vector2( 2480, 492 )
 
+[node name="PowerUp2" parent="." instance=ExtResource( 36 )]
+position = Vector2( 8342, 495 )
+
+[node name="Portal2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9707, 288 )
+next_scene_path = "res://Scenes/loadingScene.tscn"
+player_spawn_location = Vector2( 114, 313 )
+
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="EnemySamurai" parent="Enemies" instance=ExtResource( 25 )]
@@ -1388,8 +1388,73 @@ collision_layer = 8
 collision_mask = 3
 
 [node name="EnemyAmazon" parent="Enemies" instance=ExtResource( 32 )]
-position = Vector2( 683, 372 )
+position = Vector2( 751, 372 )
 collision_layer = 8
 collision_mask = 3
+enemyType = 1
+
+[node name="EnemyAmazon2" parent="Enemies" instance=ExtResource( 32 )]
+position = Vector2( 1749, 375 )
+collision_layer = 8
+collision_mask = 3
+enemyType = 1
+
+[node name="EnemyAmazon3" parent="Enemies" instance=ExtResource( 32 )]
+position = Vector2( 3328, 438 )
+collision_layer = 8
+collision_mask = 3
+enemyType = 1
+
+[node name="EnemyAmazon4" parent="Enemies" instance=ExtResource( 32 )]
+position = Vector2( 4748, 476 )
+collision_layer = 8
+collision_mask = 3
+enemyType = 1
+
+[node name="EnemySkeleton" parent="Enemies" instance=ExtResource( 37 )]
+position = Vector2( 4341, 447 )
+enemyType = 14
+
+[node name="EnemySkeleton2" parent="Enemies" instance=ExtResource( 37 )]
+position = Vector2( 5322, 413 )
+enemyType = 14
+
+[node name="EnemySkeleton3" parent="Enemies" instance=ExtResource( 37 )]
+position = Vector2( 5921, 417 )
+enemyType = 14
+
+[node name="EnemyHuntress" parent="Enemies" instance=ExtResource( 38 )]
+position = Vector2( 7161, 519 )
+enemyType = 6
+
+[node name="EnemyHuntress5" parent="Enemies" instance=ExtResource( 38 )]
+position = Vector2( 7990, 517 )
+enemyType = 6
+
+[node name="EnemyHuntress2" parent="Enemies" instance=ExtResource( 38 )]
+position = Vector2( 6282, 358 )
+enemyType = 6
+
+[node name="EnemyHuntress3" parent="Enemies" instance=ExtResource( 38 )]
+position = Vector2( 3194, 288 )
+enemyType = 6
+
+[node name="EnemyHuntress4" parent="Enemies" instance=ExtResource( 38 )]
+position = Vector2( 1404, 454 )
+enemyType = 6
+
+[node name="EnemyHero" parent="Enemies" instance=ExtResource( 39 )]
+position = Vector2( 7662, 450 )
+enemyType = 5
+
+[node name="EnemyHero2" parent="Enemies" instance=ExtResource( 39 )]
+position = Vector2( 8997, 511 )
+enemyType = 5
+
+[node name="Niebla" type="Sprite" parent="."]
+modulate = Color( 0.129412, 0.121569, 0.121569, 0.529412 )
+position = Vector2( 5416.5, 296 )
+scale = Vector2( 28.3568, 3.01852 )
+texture = ExtResource( 13 )
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]

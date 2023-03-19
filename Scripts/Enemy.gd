@@ -135,9 +135,9 @@ func selectEnemyType(enemyType):
 			$EnemyName.text = "Amazon"
 			hitType = 1
 			hitAnim = 2
-			enemyDamage = 20 
-			enemyLife = 100
-			enemyScore = 10
+			enemyDamage = 60 
+			enemyLife = 400
+			enemyScore = 70
 		2: #EnemyFireWorm.tscn
 			$EnemyName.text = "Fire Worm"
 			hitType = 2
@@ -160,15 +160,15 @@ func selectEnemyType(enemyType):
 		5: #EnemyHero.tscn
 			$EnemyName.text = "Dark Hero"
 			hitType = 4
-			enemyDamage = 60
-			enemyLife = 450
-			enemyScore = 80
+			enemyDamage = 100
+			enemyLife = 550
+			enemyScore = 110
 		6: #EnemyHuntress.tscn
 			$EnemyName.text = "Huntress"
 			hitType = 4 #el ataque del jefe es aleatorio entre todos los tipos
 			hitAnim = 1
-			enemyDamage = 70
-			enemyLife = 600
+			enemyDamage = 50
+			enemyLife = 300
 			enemyScore = 60
 		7: #EnemyKing.tscn
 			$EnemyName.text = "King Lean"
@@ -215,7 +215,7 @@ func selectEnemyType(enemyType):
 			$EnemyName.text = "Skeleton Warrior"
 			hitType = 0 #el ataque del jefe es aleatorio entre todos los tipos
 			enemyDamage = 70
-			enemyLife = 600
+			enemyLife = 500
 			enemyScore = 130
 		14: #EnemyWarrior.tscn
 			$EnemyName.text = "Renegade Knight"

@@ -33,7 +33,7 @@ func _input(event):
 		player_initial_map_position = Vector2(80, 460)
 		lifes = 3
 		enemyScoreCounter = 0
-		get_tree().change_scene("res://Scenes/Levels/Level.tscn")
+		get_tree().change_scene("res://Scenes/Levels/Level1.tscn")
 
 
 func _on_CreateFloatingTextButtonGlobal(text, x, y, typeText, timeToShow): #texto flotante para mostrar los diferentes mensajes
