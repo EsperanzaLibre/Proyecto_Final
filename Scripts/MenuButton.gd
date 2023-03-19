@@ -38,7 +38,7 @@ func _on_MusicButton_pressed():
 		musicLabel.text = "OFF"
 
 func _on_FxButton_pressed():
-	Global.fx = !Global.fx
+	Global.fxGame = !Global.fxGame
 	if Global.fxGame:
 		fxLabel.text = "ON"
 	else:

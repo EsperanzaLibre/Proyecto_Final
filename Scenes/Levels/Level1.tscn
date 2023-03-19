@@ -1871,34 +1871,50 @@ position = Vector2( 4383, 502 )
 
 [node name="EnemyMage" parent="Enemy" instance=ExtResource( 15 )]
 position = Vector2( 14697, 550 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 8
 
 [node name="EnemyGoblin" parent="Enemy" instance=ExtResource( 24 )]
 position = Vector2( 1808, 483 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 4
 
 [node name="EnemyShogun" parent="Enemy" instance=ExtResource( 30 )]
 position = Vector2( 2810, 385 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 12
 
 [node name="EnemyGoblin2" parent="Enemy" instance=ExtResource( 24 )]
 position = Vector2( 3353, 511 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 4
 
 [node name="EnemyGoblin3" parent="Enemy" instance=ExtResource( 24 )]
 position = Vector2( 3952, 511 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 4
 
 [node name="EnemyWarrior" parent="Enemy" instance=ExtResource( 31 )]
 position = Vector2( 6417, 513 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 14
 
 [node name="EnemyFireWorm" parent="Enemy" instance=ExtResource( 29 )]
 position = Vector2( 7465, 516 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 2
 
 [node name="EnemyWarrior2" parent="Enemy" instance=ExtResource( 31 )]
 position = Vector2( 8669, 450 )
+collision_layer = 8
+collision_mask = 3
 enemyType = 14
 
 [node name="PowerUp" parent="." instance=ExtResource( 16 )]

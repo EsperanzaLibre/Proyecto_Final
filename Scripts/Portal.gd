@@ -39,6 +39,6 @@ func changeLevel():
 	Global.timer_min=5
 	Global.timer_sec=0
 	Global.timer_mil=0
-	Global.level_number += 1
+	#Global.level_number += 1
 	if get_tree().change_scene(next_scene_path) != OK:
 		print ("Error: La escena no se pudo cargar")
