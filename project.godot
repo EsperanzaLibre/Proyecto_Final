@@ -74,6 +74,7 @@ ui_shoot={
 2d_physics/layer_4="enemy"
 2d_physics/layer_5="portal"
 2d_physics/layer_6="door"
+2d_physics/layer_7="fairies"
 2d_render/walk=false
 
 [physics]

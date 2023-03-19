@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/PowerUp.gd" type="Script" id=1]
 [ext_resource path="res://Assets/HeartWithContainer.png" type="Texture" id=2]
+[ext_resource path="res://Assets/light.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -36,5 +37,11 @@ texture = ExtResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "moving"
 anims/moving = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 0.5
+color = Color( 0.764706, 0.0156863, 0.0156863, 1 )
+energy = 1.13
 
 [connection signal="body_entered" from="." to="." method="_on_PowerUp_body_entered"]

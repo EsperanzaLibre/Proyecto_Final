@@ -134,6 +134,8 @@ font_data = SubResource( 20 )
 
 [node name="EnemyFlyingEye" type="KinematicBody2D" groups=["Enemies"]]
 position = Vector2( 0, -2 )
+collision_layer = 8
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="PlayerDetector" type="Area2D" parent="."]
