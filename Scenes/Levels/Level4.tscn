@@ -1470,7 +1470,6 @@ range_height = 1.0
 position = Vector2( 1697, 400 )
 scale = Vector2( 2.0625, 2.0625 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire2"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1483,7 +1482,6 @@ range_height = 1.0
 position = Vector2( 831, 465 )
 scale = Vector2( 2.0625, 2.0625 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire3"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1496,7 +1494,6 @@ range_height = 1.0
 position = Vector2( 2304, 398 )
 scale = Vector2( 2.0625, 2.0625 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire4"]
 position = Vector2( -1.4541, -0.969727 )
@@ -1509,7 +1506,6 @@ range_height = 1.0
 position = Vector2( 4481, 406 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire5"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1522,7 +1518,6 @@ range_height = 1.0
 position = Vector2( 4576, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire6"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1535,7 +1530,6 @@ range_height = 1.0
 position = Vector2( 4672, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire7"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1548,7 +1542,6 @@ range_height = 1.0
 position = Vector2( 4768, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire8"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1561,7 +1554,6 @@ range_height = 1.0
 position = Vector2( 4863, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire9"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1574,7 +1566,6 @@ range_height = 1.0
 position = Vector2( 4958, 404 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire10"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1587,7 +1578,6 @@ range_height = 1.0
 position = Vector2( 5057, 404 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire11"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1600,7 +1590,6 @@ range_height = 1.0
 position = Vector2( 5152, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire12"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1613,7 +1602,6 @@ range_height = 1.0
 position = Vector2( 5247, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire13"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1626,7 +1614,6 @@ range_height = 1.0
 position = Vector2( 5342, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire14"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1639,7 +1626,6 @@ range_height = 1.0
 position = Vector2( 5441, 406 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire15"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1652,7 +1638,6 @@ range_height = 1.0
 position = Vector2( 5535, 405 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire16"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1665,7 +1650,6 @@ range_height = 1.0
 position = Vector2( 5633, 406 )
 scale = Vector2( 1.28125, 1.28125 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire17"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1678,7 +1662,6 @@ range_height = 1.0
 position = Vector2( 3377, 375 )
 scale = Vector2( 1.20207, 1.20207 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire18"]
 position = Vector2( -1.4541, -0.969727 )
@@ -1691,7 +1674,6 @@ range_height = 1.0
 position = Vector2( 7471, 361 )
 scale = Vector2( 0.960498, 0.960498 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire19"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1704,7 +1686,6 @@ range_height = 1.0
 position = Vector2( 7567, 361 )
 scale = Vector2( 0.960498, 0.960498 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire20"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1717,7 +1698,6 @@ range_height = 1.0
 position = Vector2( 7727, 361 )
 scale = Vector2( 0.960498, 0.960498 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire21"]
 position = Vector2( 5.81824, -5.81824 )
@@ -1730,7 +1710,6 @@ range_height = 1.0
 position = Vector2( 7823, 361 )
 scale = Vector2( 0.960498, 0.960498 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire22"]
 position = Vector2( 6.24219, -7.28809 )
@@ -1743,7 +1722,6 @@ range_height = 1.0
 position = Vector2( 8207, 360 )
 scale = Vector2( 0.960498, 0.960498 )
 z_index = -1
-frame = 0
 
 [node name="Light2D" type="Light2D" parent="fires/fire23"]
 position = Vector2( 6.24219, -7.28809 )
