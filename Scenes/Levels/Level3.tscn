@@ -1148,6 +1148,7 @@ outline_color = Color( 0.215686, 0.215686, 0, 1 )
 font_data = SubResource( 77 )
 
 [node name="Level3" type="Node2D"]
+position = Vector2( -2, -2 )
 script = ExtResource( 4 )
 
 [node name="Darkness" type="CanvasModulate" parent="."]
@@ -1213,7 +1214,7 @@ position = Vector2( 7537, 325 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="FairieRed2" parent="Flames" instance=ExtResource( 34 )]
-position = Vector2( 6404, 710 )
+position = Vector2( 4898, 147 )
 
 [node name="FairieRed3" parent="Flames" instance=ExtResource( 34 )]
 position = Vector2( 6494, 150 )

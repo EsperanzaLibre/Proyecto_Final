@@ -1726,7 +1726,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 0.222725
+shader_param/zoom = 1.05946
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -1756,6 +1756,7 @@ outline_color = Color( 0.215686, 0.215686, 0, 1 )
 font_data = SubResource( 69 )
 
 [node name="Level1" type="Node2D"]
+position = Vector2( 4692, -47 )
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
