@@ -158,12 +158,12 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta14" : {
-		"Pregunta" : "¿Cómo se llama la ciudad en la que desenvuelve Resident Evil?",
+		"Pregunta" : "¿Cómo se llama el Heroe de Resident Evil?",
 		"PosiblesRespuestas": {
-			1 : "New York City",
-			2 : "High Valley City",
-			3 : "Resident City",
-			4 : "Racoon City"
+			1 : "Leon Santillan",
+			2 : "Leon Tolstoi",
+			3 : "Leon Gieco",
+			4 : "Leon Kennedy"
 		},
 		"RespuestasCorrectas" : [4],
 		"AddPoints" : 1,
@@ -238,6 +238,126 @@ var arreglo_preguntas := {
 			4 : "Sir Nacho"
 		},
 		"RespuestasCorrectas" : [1],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta21" : {
+		"Pregunta" : "¿Qué videojuego es el más vendido de todos los tiempos?",
+		"PosiblesRespuestas": {
+			1 : "Minecraft",
+			2 : "Mario Bros",
+			3 : "Fortnite",
+			4 : "Sir Nacho"
+		},
+		"RespuestasCorrectas" : [1],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta22" : {
+		"Pregunta" : "¿En qué se inspiró el creador de Pac Man para crear este personaje?",
+		"PosiblesRespuestas": {
+			1 : "En una galleta",
+			2 : "En una tarta",
+			3 : "En una pizza",
+			4 : "En un globo"
+		},
+		"RespuestasCorrectas" : [3],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta23" : {
+		"Pregunta" : "¿Cuál es el videojuego más caro producido hasta la fecha?",
+		"PosiblesRespuestas": {
+			1 : "Grand Theft Auto V",
+			2 : "Tomb Raider",
+			3 : "Red Dead Redemption 2",
+			4 : "Sonic"
+		},
+		"RespuestasCorrectas" : [1],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta24" : {
+		"Pregunta" : "¿Cuál fue uno de los primeros juegos de la consola Atari?",
+		"PosiblesRespuestas": {
+			1 : "Pac Man",
+			2 : "Space Invaders",
+			3 : "Combat",
+			4 : "Shinobi"
+		},
+		"RespuestasCorrectas" : [3],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta25" : {
+		"Pregunta" : "Cuál de estos videojuegos ha desarrollado Rockstar?",
+		"PosiblesRespuestas": {
+			1 : "Grand Theft Auto V",
+			2 : "Assassin's Creed",
+			3 : "Call of Duty",
+			4 : "Rainbow Six"
+		},
+		"RespuestasCorrectas" : [1],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta26" : {
+		"Pregunta" : "¿En qué videojuego aparecen los Stalfos?",
+		"PosiblesRespuestas": {
+			1 : "Warcraft",
+			2 : "God of War",
+			3 : "Among Us",
+			4 : "The Legend of Zelda"
+		},
+		"RespuestasCorrectas" : [4],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta27" : {
+		"Pregunta" : "¿Cuál de estos videojuegos está considerado como uno de los más difíciles?",
+		"PosiblesRespuestas": {
+			1 : "World of Warcraft",
+			2 : "Roblox",
+			3 : "Demon's souls",
+			4 : "Sir Nacho"
+		},
+		"RespuestasCorrectas" : [3],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta28" : {
+		"Pregunta" : "¿Qué comenzó lanzando Nintendo antes que videojuegos?",
+		"PosiblesRespuestas": {
+			1 : "Naipes",
+			2 : "Comida para gatos",
+			3 : "Televisores de plasma",
+			4 : "Cubos Rubix"
+		},
+		"RespuestasCorrectas" : [1],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta29" : {
+		"Pregunta" : "¿En qué videojuegos aparece la princesa Peach?",
+		"PosiblesRespuestas": {
+			1 : "Pokemon",
+			2 : "Super Mario",
+			3 : "Dracula",
+			4 : "Sonic"
+		},
+		"RespuestasCorrectas" : [2],
+		"AddPoints" : 1,
+		"AddXP" : 1
+	},
+	"Pregunta30" : {
+		"Pregunta" : "¿Por qué se llama así el videojuego Final Fantasy?",
+		"PosiblesRespuestas": {
+			1 : "Es por el final apocalíptico en la Tierra",
+			2 : "No se pudo registrar el nombre Fighting Fantasy",
+			3 : "Es sobre el final de los videojuegos",
+			4 : "Porque Sir Nacho estaba ocupado"
+		},
+		"RespuestasCorrectas" : [2],
 		"AddPoints" : 1,
 		"AddXP" : 1
 	}
