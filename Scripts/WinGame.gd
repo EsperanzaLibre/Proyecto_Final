@@ -13,6 +13,7 @@ func animation():
 		$AnimationPlayer.play("player-movement")
 		if animationTitulo:
 			$AnimationTitulo.play("anim-titulo")
+			$AnimationDialogo.play("dialogo_visible")
 			animationTitulo = false
 	else:
 		$AnimationPlayer.play("walk-player")
