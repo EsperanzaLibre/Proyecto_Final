@@ -24,6 +24,7 @@ var music = true #controlo la musica ambiental
 var fxGame = true #controlo los sonidos fx
 var control = true #variable de control para que no ingrese al if en cada proceso
 var bossDefeat = false #controlo si mato al jefe del level
+var checkDialog = 3 #verifico si el usuario termino de leer el dialogo
 
 func _ready():
 	pass # Replace with function body.
@@ -33,8 +34,8 @@ func _input(event):
 		player_initial_map_position = Vector2(80, 460)
 		lifes = 3
 		enemyScoreCounter = 0
+		Global.timer_pause = false
 		get_tree().change_scene("res://Scenes/Levels/Level1.tscn")
-
 
 func _on_CreateFloatingTextButtonGlobal(text, x, y, typeText, timeToShow): #texto flotante para mostrar los diferentes mensajes
 	var floaty_text = floaty_text_scene.instance()

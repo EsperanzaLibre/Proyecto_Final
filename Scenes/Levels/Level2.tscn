@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/light.png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Scenes/Enemies/EnemyMageBoss.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Scenes/Enemies/EnemyGoblin.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Scenes/Enemies/EnemyHero.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Dialog.tscn" type="PackedScene" id=30]
 
 [sub_resource type="TileSet" id=82]
 0/name = "props1.png 0"
@@ -1587,5 +1588,7 @@ position = Vector2( 4934, 1652 )
 
 [node name="PowerUp2" parent="." instance=ExtResource( 23 )]
 position = Vector2( 4365, 1043 )
+
+[node name="Dialog" parent="." instance=ExtResource( 30 )]
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]

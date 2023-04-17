@@ -251,7 +251,6 @@ func _on_EnemyBody_area_entered(area):
 			area.queue_free()
 			Global.enemyScoreCounter += enemyScore #sumo el puntaje
 			if enemyBoss: #activo el control si el enemigo era un jefe
-				print("jefe muere")
 				Global.bossDefeat = true
 		#	if enemyType == 6:
 		#		Global.gameFinalCondition = 1

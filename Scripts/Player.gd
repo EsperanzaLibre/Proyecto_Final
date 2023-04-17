@@ -46,10 +46,11 @@ func _ready():
 		sprite.texture = ResourceLoader.load("res://Assets/hero.png")
 
 func _physics_process(delta):
-	_move()
-	hitTime += delta
-	_jump()
-	powerUp()
+	if Global.checkDialog < 1:
+		_move()
+		_jump()
+		hitTime += delta
+		powerUp()
 	motion = move_and_slide(motion,up)
 	
 func _move():
@@ -125,7 +126,7 @@ func _jump():
 		jump = 0
 		onFloor = true
 		
-	if Input.is_action_just_pressed("ui_accept") && jump < maxJump:
+	if Input.is_action_just_pressed("ui_jump") && jump < maxJump:
 		onFloor = false
 		if jump == 0:
 			#animacion de salto simple

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://icono.png" type="Texture" id=1]
 [ext_resource path="res://Assets/hero_icon.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/GameTime.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/assets level1/props.png" type="Texture" id=18]
 [ext_resource path="res://Assets/assets level1/Deco01.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Dialog.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Checkpoint.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=23]
@@ -1726,7 +1727,7 @@ noise = SubResource( 39 )
 render_priority = 4
 shader = SubResource( 38 )
 shader_param/scale = Vector2( 192.891, 4.5 )
-shader_param/zoom = 0.148651
+shader_param/zoom = 0.943874
 shader_param/water_color = Color( 0.121569, 0.392157, 0.458824, 0.556863 )
 shader_param/distortion_scale = Vector2( 0.1, 0.1 )
 shader_param/intensity = 0.07
@@ -1831,7 +1832,7 @@ position = Vector2( 6159.75, 607 )
 shape = SubResource( 52 )
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
-position = Vector2( 81, 492 )
+position = Vector2( 81, 450 )
 scale = Vector2( 1.6, 1.6 )
 collision_layer = 2
 
@@ -1930,6 +1931,7 @@ volume_db = -10.439
 autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Hud" type="Node2D" parent="UI"]
 position = Vector2( 23, 7 )
@@ -1973,6 +1975,8 @@ custom_colors/default_color = Color( 1, 1, 0, 1 )
 custom_fonts/normal_font = SubResource( 72 )
 text = "Score: "
 deselect_on_focus_loss_enabled = false
+
+[node name="Dialog" parent="." instance=ExtResource( 20 )]
 
 [connection signal="body_entered" from="Floor/AreaDead" to="." method="_on_AreaDead_body_entered"]
 [connection signal="item_rect_changed" from="water" to="water" method="_on_water_item_rect_changed"]

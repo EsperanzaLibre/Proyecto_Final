@@ -18,7 +18,6 @@ func _physics_process(delta):
 		#print(Global.trivia_check) #debug
 		if Global.trivia_check == false: #pregunto si ya ingreso al hall de la trivia
 			if Global.scene_to_back == "": #pregunto si la escena a volver esta vacia
-				print("Entra al Hall de la trivia")
 				print(Global.scene_to_back)
 				Global.timer_pause = true #cuando ingresa al hall detengo el tiempo
 				Global.player_door_map_position = self.global_position #tomo la posicion global de la puerta en el lvl
@@ -28,7 +27,6 @@ func _physics_process(delta):
 				Global.scene_to_back = "res://Scenes/Levels/"+get_tree().get_current_scene().get_name()+".tscn" #cargo la escena a donde debe regresar
 				get_tree().change_scene(next_scene_path) #cambio de escena
 			else:
-				print("Sale del hall de la trivia")
 				Global.show_text = true
 				print(Global.scene_to_back)
 				Global.player_initial_map_position = Global.player_door_map_position #asigno la posicion de la puerta al player
@@ -43,8 +41,6 @@ func _physics_process(delta):
 func _on_Door_body_entered(body):
 	if body.is_in_group("Player"): #si el body esta en el grupo player entro al if
 		hero_body = body
-		print("Entra a la colision")
 
 func _on_Door_body_exited(body):
-		print("Sale de la colision")
 		hero_body = null
