@@ -11,7 +11,6 @@ onready var dialog = $Dialog
 func _ready():
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
 	if Global.timer_pause == false: #si es falso el nivel inicia
-		print("Entra en ready false")
 		Global.checkDialog = 3 #Valido para que desaparezcan los dialogo
 		ui.visible=false
 		dialog.visible = true
