@@ -8,6 +8,9 @@ var dialog = Global.level_number
 var set_msg: Array #arreglo que controla los dialogos
 
 func _ready():
+	if Global.checkDialog <= -1:
+		hide()
+		return
 	load_dialogs()
 
 func _input(event):
@@ -18,9 +21,6 @@ func _input(event):
 			show_message()
 			if set_msg.size() == 0:
 				continuaText.text = 'Enter para Salir'
-	else:
-		hide()
-		return
 
 func show_message():
 	if set_msg.size() == 0:

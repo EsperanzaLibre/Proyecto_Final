@@ -560,14 +560,14 @@ limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
+[node name="Door" parent="." instance=ExtResource( 11 )]
+position = Vector2( 673, 334 )
+doorType = 1
+
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 94, 324 )
 scale = Vector2( 1.2, 1.2 )
 collision_layer = 2
-
-[node name="Door" parent="." instance=ExtResource( 11 )]
-position = Vector2( 673, 334 )
-doorType = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 57 )

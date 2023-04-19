@@ -11,7 +11,6 @@ onready var dialog = $Dialog
 func _ready():
 	player_life_bar.max_value = Global.player_max_life #configuro la vida maxima posible
 	if Global.timer_pause == false: #si es falso el nivel inicia
-		Global.checkDialog = 3 #Valido para que desaparezcan los dialogo
 		ui.visible=false
 		dialog.visible = true
 		Global.player_life = Global.player_max_life
@@ -20,7 +19,6 @@ func _ready():
 		Global.timer_sec = 0
 		Global.timer_mil = 0
 	else:
-		print("Entra en ready true")
 		ui.visible=true
 		dialog.visible = false
 		#Global.timer_pause = false #si es verdadero el nivel viene de la trivia		
@@ -44,7 +42,7 @@ func _on_AreaDead_body_entered(body):
 	#y lo devuelve al inicio del mapa donde esta o al checkpoint alcanzado
 	if body.is_in_group("Player"):
 		Global.lifes -= 1 
-		#Global.timer_pause = false
+		Global.timer_pause = true
 		get_tree().reload_current_scene()
 		
 

@@ -47,10 +47,10 @@ func _ready():
 
 func _physics_process(delta):
 	if Global.checkDialog < 1:
+		powerUp()
 		_move()
 		_jump()
 		hitTime += delta
-		powerUp()
 	motion = move_and_slide(motion,up)
 	
 func _move():
@@ -180,3 +180,6 @@ func powerUp(): #cuando el heroe alcanza las 3 respuestas correctas obtiene el p
 	if Global.triviaCorrectAnswers == 3:
 		sprite.texture = ResourceLoader.load("res://Assets/hero_power_up.png")
 		animationPlayer.play("power")
+		yield(animationPlayer,"animation_finished")
+		animationPlayer.stop()
+		animationPlayer.play("idle")

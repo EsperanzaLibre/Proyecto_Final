@@ -36,6 +36,7 @@ func changeLevel():
 	Global.triviaCorrectAnswers = 0 #vuelvo a cero el contador de respuestas correctas
 	Global.enemyScoreCounter = 0
 	Global.trivia_check = false
+	Global.checkDialog = 3 #Valido para que desaparezcan los dialogo
 	Global.timer_min=5
 	Global.timer_sec=0
 	Global.timer_mil=0

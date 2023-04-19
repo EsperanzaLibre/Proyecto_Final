@@ -119,6 +119,7 @@ extents = Vector2( 13, 20 )
 size = 14
 outline_size = 1
 outline_color = Color( 0.956863, 0.854902, 0.027451, 1 )
+use_filter = true
 font_data = ExtResource( 7 )
 
 [node name="EnemySkeleton" type="KinematicBody2D" groups=["Enemies"]]
@@ -183,7 +184,7 @@ texture_progress = ExtResource( 4 )
 
 [node name="EnemyName" type="Label" parent="."]
 margin_left = -41.0
-margin_top = -56.0
+margin_top = -79.0
 margin_right = 42.0
 margin_bottom = -29.0
 custom_colors/font_color = Color( 0.0784314, 0.168627, 0.0784314, 1 )

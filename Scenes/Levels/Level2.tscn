@@ -1429,7 +1429,6 @@ collision_layer = 2
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -55, 0 )
 current = true
-zoom = Vector2( 0.7, 0.7 )
 limit_left = 0
 limit_top = 200
 limit_right = 5200
