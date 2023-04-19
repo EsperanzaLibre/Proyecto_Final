@@ -74,7 +74,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta7" : {
-		"Pregunta" : "¿Cuántos luchadores hay en Street Fighter II?",
+		"Pregunta" : "¿Cuantos luchadores hay en Street Fighter II?",
 		"PosiblesRespuestas": {
 			1 : "12",
 			2 : "8",
@@ -86,7 +86,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta8" : {
-		"Pregunta" : "¿Cuántas entradas para mandos tiene Nintendo 64?",
+		"Pregunta" : "¿Cuantas entradas para mandos tiene Nintendo 64?",
 		"PosiblesRespuestas": {
 			1 : "2",
 			2 : "1",
@@ -98,7 +98,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},	
 	"Pregunta9" : {
-		"Pregunta" : "¿Cuál es un videojuego de autos de carrera?",
+		"Pregunta" : "¿Cual es un videojuego de autos de carrera?",
 		"PosiblesRespuestas": {
 			1 : "Age of Empires",
 			2 : "Revolt",
@@ -110,7 +110,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta10" : {
-		"Pregunta" : "¿Cómo se llama el enemigo de Sonic?",
+		"Pregunta" : "¿Como se llama el enemigo de Sonic?",
 		"PosiblesRespuestas": {
 			1 : "Dr Malito",
 			2 : "Robotech",
@@ -122,7 +122,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta11" : {
-		"Pregunta" : "¿Cuál fue la primera consola de PlayStation?",
+		"Pregunta" : "¿Cual fue la primera consola de PlayStation?",
 		"PosiblesRespuestas": {
 			1 : "PS Project",
 			2 : "PS1",
@@ -146,7 +146,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta13" : {
-		"Pregunta" : "¿Cómo se llama la ciudad en la que desenvuelve Resident Evil?",
+		"Pregunta" : "¿Como se llama la ciudad en la que desenvuelve Resident Evil?",
 		"PosiblesRespuestas": {
 			1 : "New York City",
 			2 : "High Valley City",
@@ -158,7 +158,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta14" : {
-		"Pregunta" : "¿Cómo se llama el Heroe de Resident Evil?",
+		"Pregunta" : "¿Como se llama el Heroe de Resident Evil?",
 		"PosiblesRespuestas": {
 			1 : "Leon Santillan",
 			2 : "Leon Tolstoi",
@@ -170,7 +170,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta15" : {
-		"Pregunta" : "¿Cómo se llama la protagonista del juego Tomb Raider?",
+		"Pregunta" : "¿Como se llama la protagonista del juego Tomb Raider?",
 		"PosiblesRespuestas": {
 			1 : "Jill Valentine",
 			2 : "Samus Aran",
@@ -194,7 +194,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta17" : {
-		"Pregunta" : "¿Cuál es considerado el primer juego de la historia?",
+		"Pregunta" : "¿Cual es considerado el primer juego de la historia?",
 		"PosiblesRespuestas": {
 			1 : "Pong",
 			2 : "Asteroids",
@@ -206,7 +206,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta18" : {
-		"Pregunta" : "¿Quiénes crearon el Tetris?",
+		"Pregunta" : "¿Quienes crearon el Tetris?",
 		"PosiblesRespuestas": {
 			1 : "Rusos",
 			2 : "Chinos",
@@ -218,7 +218,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta19" : {
-		"Pregunta" : "¿Cuál es la primera consola de la historia?",
+		"Pregunta" : "¿Cual es la primera consola de la historia?",
 		"PosiblesRespuestas": {
 			1 : "Atari 2600",
 			2 : "Atari Jaguar",
@@ -230,7 +230,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta20" : {
-		"Pregunta" : "¿Cuál es el peor juego creado de la historia?",
+		"Pregunta" : "¿Cual es el peor juego creado de la historia?",
 		"PosiblesRespuestas": {
 			1 : "E.T. Extraterrestre",
 			2 : "Link: The face of evil",
@@ -242,7 +242,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta21" : {
-		"Pregunta" : "¿Qué videojuego es el más vendido de todos los tiempos?",
+		"Pregunta" : "¿Que videojuego es el más vendido de todos los tiempos?",
 		"PosiblesRespuestas": {
 			1 : "Minecraft",
 			2 : "Mario Bros",
@@ -254,7 +254,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta22" : {
-		"Pregunta" : "¿En qué se inspiró el creador de Pac Man para crear este personaje?",
+		"Pregunta" : "¿En que se inspiro el creador de Pac Man para crear este personaje?",
 		"PosiblesRespuestas": {
 			1 : "En una galleta",
 			2 : "En una tarta",
@@ -266,7 +266,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta23" : {
-		"Pregunta" : "¿Cuál es el videojuego más caro producido hasta la fecha?",
+		"Pregunta" : "¿Cual es el videojuego más caro producido hasta la fecha?",
 		"PosiblesRespuestas": {
 			1 : "Grand Theft Auto V",
 			2 : "Tomb Raider",
@@ -278,7 +278,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta24" : {
-		"Pregunta" : "¿Cuál fue uno de los primeros juegos de la consola Atari?",
+		"Pregunta" : "¿Cual fue uno de los primeros juegos de la consola Atari?",
 		"PosiblesRespuestas": {
 			1 : "Pac Man",
 			2 : "Space Invaders",
@@ -290,7 +290,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta25" : {
-		"Pregunta" : "Cuál de estos videojuegos ha desarrollado Rockstar?",
+		"Pregunta" : "Cual de estos videojuegos ha desarrollado Rockstar?",
 		"PosiblesRespuestas": {
 			1 : "Grand Theft Auto V",
 			2 : "Assassin's Creed",
@@ -302,7 +302,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta26" : {
-		"Pregunta" : "¿En qué videojuego aparecen los Stalfos?",
+		"Pregunta" : "¿En que videojuego aparecen los Stalfos?",
 		"PosiblesRespuestas": {
 			1 : "Warcraft",
 			2 : "God of War",
@@ -314,7 +314,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta27" : {
-		"Pregunta" : "¿Cuál de estos videojuegos está considerado como uno de los más difíciles?",
+		"Pregunta" : "¿Cual de estos videojuegos está considerado como uno de los mas dificiles?",
 		"PosiblesRespuestas": {
 			1 : "World of Warcraft",
 			2 : "Roblox",
@@ -326,7 +326,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta28" : {
-		"Pregunta" : "¿Qué comenzó lanzando Nintendo antes que videojuegos?",
+		"Pregunta" : "¿Que comenzo lanzando Nintendo antes que videojuegos?",
 		"PosiblesRespuestas": {
 			1 : "Naipes",
 			2 : "Comida para gatos",
@@ -338,7 +338,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta29" : {
-		"Pregunta" : "¿En qué videojuegos aparece la princesa Peach?",
+		"Pregunta" : "¿En que videojuegos aparece la princesa Peach?",
 		"PosiblesRespuestas": {
 			1 : "Pokemon",
 			2 : "Super Mario",
@@ -350,7 +350,7 @@ var arreglo_preguntas := {
 		"AddXP" : 1
 	},
 	"Pregunta30" : {
-		"Pregunta" : "¿Por qué se llama así el videojuego Final Fantasy?",
+		"Pregunta" : "¿Por que se llama así el videojuego Final Fantasy?",
 		"PosiblesRespuestas": {
 			1 : "Es por el final apocalíptico en la Tierra",
 			2 : "No se pudo registrar el nombre Fighting Fantasy",
