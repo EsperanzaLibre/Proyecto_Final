@@ -1,4 +1,4 @@
-xtends KinematicBody2D
+extends KinematicBody2D
 
 const MAX_SPEED : float = 60.0
 const GRAVITY : float = 25.0

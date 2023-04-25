@@ -39,7 +39,7 @@ var enemyBoss = false #identifico al enemigo como un jefe
 
 func _ready():
 	rng.randomize()
-	selectEnemyType(enemyType)
+	selectEnemyType()
 	animationPlayer.play("walk")
 	sprite.scale.x = 1
 	motion.x = MAX_SPEED
@@ -49,7 +49,7 @@ func _ready():
 func _physics_process(_delta):
 	motion.y += GRAVITY
 	hitTime += _delta
-	_move(canMove)
+	_move()
 	
 func _next_to_left_wall() -> bool:
 	return $leftRay.is_colliding()
@@ -65,7 +65,7 @@ func _flip():
 	motion.x *= -1
 	controlDirecction()
 
-func _move(canMove):
+func _move():
 	if canMove:
 		if !_floor_detection():
 			_flip()
@@ -123,7 +123,7 @@ func controlDirecction():
 		sprite.scale.x = 1
 		hitDirecction = 2 #move_right
 
-func selectEnemyType(enemyType):
+func selectEnemyType():
 	#Funcion que selecciona el tipo de enemigo y carga su vida, ataque,
 	#nombre a mostrar y vida
 	#Los enemigos estan ordenados alfabeticamente por sus 

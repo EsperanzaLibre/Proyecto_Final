@@ -11,8 +11,6 @@ var timer_miliseconds
 func _physics_process(delta):
 	if Global.timer:
 		_run_Game_time()
-	else:
-		print("Fin de timer")
 
 func _on_Timer_timeout():
 	dsec -= 1

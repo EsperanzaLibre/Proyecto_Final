@@ -8,9 +8,8 @@ onready var fxLabel = $SoundsOfGame/FxLabel
 onready var musicLabel = $SoundsOfGame/MusicLabel
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://scenes/loadingScene.tscn")
+	get_tree().change_scene("res://Scenes/loadingScene.tscn")
 	
-
 func _on_Exit_pressed():
 	get_tree().quit()
 

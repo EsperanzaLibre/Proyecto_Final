@@ -17,10 +17,3 @@ func animation():
 			animationTitulo = false
 	else:
 		$AnimationPlayer.play("walk-player")
-		
-		
-	
-		
-	
-	
-	
